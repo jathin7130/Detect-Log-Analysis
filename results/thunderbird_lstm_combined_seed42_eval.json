@@ -1,0 +1,22 @@
+{
+  "threshold": 0.16842105263157894,
+  "tp": 5220,
+  "fp": 2145,
+  "fn": 524,
+  "tn": 7084,
+  "precision": 0.7087576374745418,
+  "recall": 0.908774373259053,
+  "f1": 0.7963994202456329,
+  "pr_auc": 0.7395298760775497,
+  "false_positive_rate": 0.232419547079857,
+  "false_alarms_per_10k_events": 1432.5786415547987,
+  "n_total": 14973,
+  "dataset": "thunderbird",
+  "model": "lstm_combined",
+  "seed": 42,
+  "topk": 3,
+  "window_size": 5,
+  "vocab_size": 1467,
+  "n_too_short_val": 0,
+  "n_too_short_test": 0
+}

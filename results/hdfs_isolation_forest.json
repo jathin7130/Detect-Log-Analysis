@@ -1,0 +1,19 @@
+{
+  "threshold": 0.5620107912664839,
+  "tp": 2319,
+  "fp": 1950,
+  "fn": 208,
+  "tn": 81784,
+  "precision": 0.5432185523541813,
+  "recall": 0.9176889592402058,
+  "f1": 0.6824602707474985,
+  "pr_auc": 0.7094142933785075,
+  "false_positive_rate": 0.023288031146248837,
+  "false_alarms_per_10k_events": 226.0581259201725,
+  "n_total": 86261,
+  "train_time_sec": 4.71543025970459,
+  "dataset": "hdfs",
+  "model": "isolation_forest",
+  "features": "tfidf",
+  "contamination": 0.029278932384695262
+}

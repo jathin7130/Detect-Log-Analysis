@@ -1,0 +1,11 @@
+[hdfs] combined-ablation seed=42 device=cuda mixed_precision=True window_size=5
+[hdfs] train_windows=5,666,992 val_windows=1,212,245 vocab_size=44
+[hdfs] epoch 1/12 train_loss=0.3751 val_loss=0.3141 val_acc=0.8988 (208.6s elapsed)
+[hdfs] epoch 2/12 train_loss=0.3140 val_loss=0.3120 val_acc=0.8987 (419.2s elapsed)
+[hdfs] epoch 3/12 train_loss=0.3123 val_loss=0.3109 val_acc=0.8995 (628.2s elapsed)
+[hdfs] epoch 4/12 train_loss=0.3114 val_loss=0.3109 val_acc=0.8995 (837.0s elapsed)
+[hdfs] epoch 5/12 train_loss=0.3110 val_loss=0.3099 val_acc=0.8997 (1046.9s elapsed)
+[hdfs] epoch 6/12 train_loss=0.3107 val_loss=0.3100 val_acc=0.8997 (1257.5s elapsed)
+[hdfs] epoch 7/12 train_loss=0.3105 val_loss=0.3102 val_acc=0.8996 (1467.6s elapsed)
+[hdfs] early stopping at epoch 7
+[hdfs] done. best_val_loss=0.3099 -> C:\Users\tejan\OneDrive\Desktop\drive\devops-log-analysis\models\hdfs_lstm_combined_seed42.pt

@@ -1,0 +1,592 @@
+[
+  {
+    "case_id": "testbed_0",
+    "source": "testbed",
+    "ground_truth": {
+      "service": "inventory",
+      "fault_type": "db_failure"
+    },
+    "llm_raw_response": "{\n  \"diagnosis\": \"The orders service is experiencing high latency or is down, causing errors in the gateway and orders services.\",\n  \"cited_evidence_ids\": [\"2026-10-07 21:41:47\", \"2026-10-07 21:41:48\", \"2026-10-07 21:41:49\", \"2026-10-07 21:41:50\"],\n  \"decision\": \"answer\",\n  \"confidence\": 0.9\n}",
+    "llm_output": {
+      "diagnosis": "The orders service is experiencing high latency or is down, causing errors in the gateway and orders services.",
+      "cited_evidence_ids": [
+        "2026-10-07 21:41:47",
+        "2026-10-07 21:41:48",
+        "2026-10-07 21:41:49",
+        "2026-10-07 21:41:50"
+      ],
+      "decision": "answer",
+      "confidence": 0.9
+    },
+    "gate": {
+      "llm_decision": "answer",
+      "gate_decision": "abstain",
+      "gate_overrode_llm": true,
+      "n_cited": 4,
+      "evidence_coverage": 0.0,
+      "unsupported_claim": true,
+      "confidence": 0.9
+    },
+    "parse_error": null
+  },
+  {
+    "case_id": "testbed_1",
+    "source": "testbed",
+    "ground_truth": {
+      "service": "orders",
+      "fault_type": "dependency_timeout"
+    },
+    "llm_raw_response": "{\n  \"diagnosis\": \"The orders service is experiencing upstream degradation, causing the gateway to return 503 errors.\",\n  \"cited_evidence_ids\": [\"2026-10-07 21:42:19\", \"2026-10-07 21:42:23\", \"2026-10-07 21:42:27\"],\n  \"decision\": \"answer\",\n  \"confidence\": 1.0\n}",
+    "llm_output": {
+      "diagnosis": "The orders service is experiencing upstream degradation, causing the gateway to return 503 errors.",
+      "cited_evidence_ids": [
+        "2026-10-07 21:42:19",
+        "2026-10-07 21:42:23",
+        "2026-10-07 21:42:27"
+      ],
+      "decision": "answer",
+      "confidence": 1.0
+    },
+    "gate": {
+      "llm_decision": "answer",
+      "gate_decision": "abstain",
+      "gate_overrode_llm": true,
+      "n_cited": 3,
+      "evidence_coverage": 0.0,
+      "unsupported_claim": true,
+      "confidence": 1.0
+    },
+    "parse_error": null
+  },
+  {
+    "case_id": "testbed_2",
+    "source": "testbed",
+    "ground_truth": {
+      "service": "payments",
+      "fault_type": "resource_exhaustion"
+    },
+    "llm_raw_response": "{\n  \"diagnosis\": \"High memory usage in the payments service is causing payment authorization failures and errors in the gateway and orders services.\",\n  \"cited_evidence_ids\": [\"2026-10-07 21:42:52\", \"2026-10-07 21:42:57\"],\n  \"decision\": \"answer\",\n  \"confidence\": 0.9\n}",
+    "llm_output": {
+      "diagnosis": "High memory usage in the payments service is causing payment authorization failures and errors in the gateway and orders services.",
+      "cited_evidence_ids": [
+        "2026-10-07 21:42:52",
+        "2026-10-07 21:42:57"
+      ],
+      "decision": "answer",
+      "confidence": 0.9
+    },
+    "gate": {
+      "llm_decision": "answer",
+      "gate_decision": "abstain",
+      "gate_overrode_llm": true,
+      "n_cited": 2,
+      "evidence_coverage": 0.0,
+      "unsupported_claim": true,
+      "confidence": 0.9
+    },
+    "parse_error": null
+  },
+  {
+    "case_id": "testbed_3",
+    "source": "testbed",
+    "ground_truth": {
+      "service": "inventory",
+      "fault_type": "pod_restart"
+    },
+    "llm_raw_response": "{\n  \"diagnosis\": \"The orders service call to the inventory service failed, causing the 502 error in the gateway.\",\n  \"cited_evidence_ids\": [\"2026-10-07 21:43:27 ERROR gateway: orders service returned 502 request_id=77ac17bf\", \"2026-10-07 21:43:27 ERROR orders: inventory service call failed: ConnectionError request_id=77ac17bf\"],\n  \"decision\": \"answer\",\n  \"confidence\": 1.0\n}",
+    "llm_output": {
+      "diagnosis": "The orders service call to the inventory service failed, causing the 502 error in the gateway.",
+      "cited_evidence_ids": [
+        "2026-10-07 21:43:27 ERROR gateway: orders service returned 502 request_id=77ac17bf",
+        "2026-10-07 21:43:27 ERROR orders: inventory service call failed: ConnectionError request_id=77ac17bf"
+      ],
+      "decision": "answer",
+      "confidence": 1.0
+    },
+    "gate": {
+      "llm_decision": "answer",
+      "gate_decision": "abstain",
+      "gate_overrode_llm": true,
+      "n_cited": 2,
+      "evidence_coverage": 0.0,
+      "unsupported_claim": true,
+      "confidence": 1.0
+    },
+    "parse_error": null
+  },
+  {
+    "case_id": "testbed_4",
+    "source": "testbed",
+    "ground_truth": {
+      "service": "orders",
+      "fault_type": "db_failure"
+    },
+    "llm_raw_response": "{\n  \"diagnosis\": \"The orders service is experiencing a database connection failure, causing order placement to be aborted.\",\n  \"cited_evidence_ids\": [\"2026-10-07 21:43:57\", \"2026-10-07 21:43:58\", \"2026-10-07 21:43:59\", \"2026-10-07 21:44:00\", \"2026-10-07 21:44:01\"],\n  \"decision\": \"answer\",\n  \"confidence\": 1.0\n}",
+    "llm_output": {
+      "diagnosis": "The orders service is experiencing a database connection failure, causing order placement to be aborted.",
+      "cited_evidence_ids": [
+        "2026-10-07 21:43:57",
+        "2026-10-07 21:43:58",
+        "2026-10-07 21:43:59",
+        "2026-10-07 21:44:00",
+        "2026-10-07 21:44:01"
+      ],
+      "decision": "answer",
+      "confidence": 1.0
+    },
+    "gate": {
+      "llm_decision": "answer",
+      "gate_decision": "abstain",
+      "gate_overrode_llm": true,
+      "n_cited": 5,
+      "evidence_coverage": 0.0,
+      "unsupported_claim": true,
+      "confidence": 1.0
+    },
+    "parse_error": null
+  },
+  {
+    "case_id": "testbed_5",
+    "source": "testbed",
+    "ground_truth": {
+      "service": "gateway",
+      "fault_type": "dependency_timeout"
+    },
+    "llm_raw_response": "{\n  \"diagnosis\": \"The gateway service experienced a dependency timeout, causing checkout requests to fail.\",\n  \"cited_evidence_ids\": [\"2026-10-07 21:44:31\", \"2026-10-07 21:44:32\"],\n  \"decision\": \"answer\",\n  \"confidence\": 0.9\n}",
+    "llm_output": {
+      "diagnosis": "The gateway service experienced a dependency timeout, causing checkout requests to fail.",
+      "cited_evidence_ids": [
+        "2026-10-07 21:44:31",
+        "2026-10-07 21:44:32"
+      ],
+      "decision": "answer",
+      "confidence": 0.9
+    },
+    "gate": {
+      "llm_decision": "answer",
+      "gate_decision": "abstain",
+      "gate_overrode_llm": true,
+      "n_cited": 2,
+      "evidence_coverage": 0.0,
+      "unsupported_claim": true,
+      "confidence": 0.9
+    },
+    "parse_error": null
+  },
+  {
+    "case_id": "testbed_6",
+    "source": "testbed",
+    "ground_truth": {
+      "service": "payments",
+      "fault_type": "pod_restart"
+    },
+    "llm_raw_response": "{\n  \"diagnosis\": \"The orders service is experiencing a temporary outage, causing subsequent services to fail.\",\n  \"cited_evidence_ids\": [\"2026-10-07 21:45:01 ERROR gateway: orders service returned 502 request_id=f6321548\"],\n  \"decision\": \"answer\",\n  \"confidence\": 0.8\n}",
+    "llm_output": {
+      "diagnosis": "The orders service is experiencing a temporary outage, causing subsequent services to fail.",
+      "cited_evidence_ids": [
+        "2026-10-07 21:45:01 ERROR gateway: orders service returned 502 request_id=f6321548"
+      ],
+      "decision": "answer",
+      "confidence": 0.8
+    },
+    "gate": {
+      "llm_decision": "answer",
+      "gate_decision": "abstain",
+      "gate_overrode_llm": true,
+      "n_cited": 1,
+      "evidence_coverage": 0.0,
+      "unsupported_claim": true,
+      "confidence": 0.8
+    },
+    "parse_error": null
+  },
+  {
+    "case_id": "testbed_7",
+    "source": "testbed",
+    "ground_truth": {
+      "service": "inventory",
+      "fault_type": "resource_exhaustion"
+    },
+    "llm_raw_response": "{\n  \"diagnosis\": \"High memory usage in the inventory service is causing errors in the orders service and inventory service.\",\n  \"cited_evidence_ids\": [\"2026-10-07 21:45:32\", \"2026-10-07 21:45:34\", \"2026-10-07 21:45:36\", \"2026-10-07 21:45:38\"],\n  \"decision\": \"answer\",\n  \"confidence\": 0.9\n}",
+    "llm_output": {
+      "diagnosis": "High memory usage in the inventory service is causing errors in the orders service and inventory service.",
+      "cited_evidence_ids": [
+        "2026-10-07 21:45:32",
+        "2026-10-07 21:45:34",
+        "2026-10-07 21:45:36",
+        "2026-10-07 21:45:38"
+      ],
+      "decision": "answer",
+      "confidence": 0.9
+    },
+    "gate": {
+      "llm_decision": "answer",
+      "gate_decision": "abstain",
+      "gate_overrode_llm": true,
+      "n_cited": 4,
+      "evidence_coverage": 0.0,
+      "unsupported_claim": true,
+      "confidence": 0.9
+    },
+    "parse_error": null
+  },
+  {
+    "case_id": "hdfs_blk_8666997314427077152",
+    "source": "hdfs",
+    "ground_truth": {
+      "label": "anomaly",
+      "seq_id": "blk_8666997314427077152",
+      "detector": "lstm_seed42"
+    },
+    "llm_raw_response": "{\n  \"diagnosis\": \"The HDFS NameSystem is receiving redundant addStoredBlock requests for the same block, causing it to be added to the invalidSet.\",\n  \"cited_evidence_ids\": [\"9\", \"10\"],\n  \"decision\": \"answer\",\n  \"confidence\": 1.0\n}",
+    "llm_output": {
+      "diagnosis": "The HDFS NameSystem is receiving redundant addStoredBlock requests for the same block, causing it to be added to the invalidSet.",
+      "cited_evidence_ids": [
+        "9",
+        "10"
+      ],
+      "decision": "answer",
+      "confidence": 1.0
+    },
+    "gate": {
+      "llm_decision": "answer",
+      "gate_decision": "abstain",
+      "gate_overrode_llm": true,
+      "n_cited": 2,
+      "evidence_coverage": 0.0,
+      "unsupported_claim": true,
+      "confidence": 1.0
+    },
+    "parse_error": null
+  },
+  {
+    "case_id": "hdfs_blk_8314861979685823270",
+    "source": "hdfs",
+    "ground_truth": {
+      "label": "anomaly",
+      "seq_id": "blk_8314861979685823270",
+      "detector": "lstm_seed42"
+    },
+    "llm_raw_response": "{\n  \"diagnosis\": \"The HDFS NameNode is experiencing issues with block allocation and storage, leading to exceptions while serving blocks.\",\n  \"cited_evidence_ids\": [\"[] INFO hdfs: BLOCK* NameSystem.allocateBlock: <PATH> <BLK>\", \"[] INFO hdfs: BLOCK* NameSystem.addStoredBlock: blockMap updated: <IP>:50010 is added to <BLK> size <*>\"],\n  \"decision\": \"answer\",\n  \"confidence\": 0.8\n}",
+    "llm_output": {
+      "diagnosis": "The HDFS NameNode is experiencing issues with block allocation and storage, leading to exceptions while serving blocks.",
+      "cited_evidence_ids": [
+        "[] INFO hdfs: BLOCK* NameSystem.allocateBlock: <PATH> <BLK>",
+        "[] INFO hdfs: BLOCK* NameSystem.addStoredBlock: blockMap updated: <IP>:50010 is added to <BLK> size <*>"
+      ],
+      "decision": "answer",
+      "confidence": 0.8
+    },
+    "gate": {
+      "llm_decision": "answer",
+      "gate_decision": "abstain",
+      "gate_overrode_llm": true,
+      "n_cited": 2,
+      "evidence_coverage": 0.0,
+      "unsupported_claim": true,
+      "confidence": 0.8
+    },
+    "parse_error": null
+  },
+  {
+    "case_id": "hdfs_blk_8828814086481251776",
+    "source": "hdfs",
+    "ground_truth": {
+      "label": "anomaly",
+      "seq_id": "blk_8828814086481251776",
+      "detector": "lstm_seed42"
+    },
+    "llm_raw_response": "{\n  \"diagnosis\": \"The HDFS cluster is experiencing a block replication issue, with blocks being received and served multiple times.\",\n  \"cited_evidence_ids\": [\"[] INFO hdfs: Receiving block <BLK> src: <*> dest: /<IP>:50010\", \"[] INFO hdfs: <IP>:50010 Served block <BLK> to /<IP>\"],\n  \"decision\": \"answer\",\n  \"confidence\": 0.8\n}",
+    "llm_output": {
+      "diagnosis": "The HDFS cluster is experiencing a block replication issue, with blocks being received and served multiple times.",
+      "cited_evidence_ids": [
+        "[] INFO hdfs: Receiving block <BLK> src: <*> dest: /<IP>:50010",
+        "[] INFO hdfs: <IP>:50010 Served block <BLK> to /<IP>"
+      ],
+      "decision": "answer",
+      "confidence": 0.8
+    },
+    "gate": {
+      "llm_decision": "answer",
+      "gate_decision": "abstain",
+      "gate_overrode_llm": true,
+      "n_cited": 2,
+      "evidence_coverage": 0.0,
+      "unsupported_claim": true,
+      "confidence": 0.8
+    },
+    "parse_error": null
+  },
+  {
+    "case_id": "hdfs_blk_8449324691093002833",
+    "source": "hdfs",
+    "ground_truth": {
+      "label": "anomaly",
+      "seq_id": "blk_8449324691093002833",
+      "detector": "lstm_seed42"
+    },
+    "llm_raw_response": "{\n  \"diagnosis\": \"The HDFS cluster is experiencing a block replication issue, where blocks are being received and served multiple times.\",\n  \"cited_evidence_ids\": [\"[] INFO hdfs: Receiving block <BLK> src: <*> dest: /<IP>:50010\", \"[] INFO hdfs: <IP>:50010 Served block <BLK> to /<IP>\"],\n  \"decision\": \"answer\",\n  \"confidence\": 0.8\n}",
+    "llm_output": {
+      "diagnosis": "The HDFS cluster is experiencing a block replication issue, where blocks are being received and served multiple times.",
+      "cited_evidence_ids": [
+        "[] INFO hdfs: Receiving block <BLK> src: <*> dest: /<IP>:50010",
+        "[] INFO hdfs: <IP>:50010 Served block <BLK> to /<IP>"
+      ],
+      "decision": "answer",
+      "confidence": 0.8
+    },
+    "gate": {
+      "llm_decision": "answer",
+      "gate_decision": "abstain",
+      "gate_overrode_llm": true,
+      "n_cited": 2,
+      "evidence_coverage": 0.0,
+      "unsupported_claim": true,
+      "confidence": 0.8
+    },
+    "parse_error": null
+  },
+  {
+    "case_id": "bgl_bgl_33228",
+    "source": "bgl",
+    "ground_truth": {
+      "label": "anomaly",
+      "seq_id": "bgl_33228",
+      "detector": "lstm_seed42"
+    },
+    "llm_raw_response": "{\n  \"diagnosis\": \"The system is experiencing issues with the node card, which is not fully functional.\",\n  \"cited_evidence_ids\": [\"10\", \"11\", \"12\"],\n  \"decision\": \"answer\",\n  \"confidence\": 1.0\n}",
+    "llm_output": {
+      "diagnosis": "The system is experiencing issues with the node card, which is not fully functional.",
+      "cited_evidence_ids": [
+        "10",
+        "11",
+        "12"
+      ],
+      "decision": "answer",
+      "confidence": 1.0
+    },
+    "gate": {
+      "llm_decision": "answer",
+      "gate_decision": "abstain",
+      "gate_overrode_llm": true,
+      "n_cited": 3,
+      "evidence_coverage": 0.0,
+      "unsupported_claim": true,
+      "confidence": 1.0
+    },
+    "parse_error": null
+  },
+  {
+    "case_id": "bgl_bgl_26863",
+    "source": "bgl",
+    "ground_truth": {
+      "label": "anomaly",
+      "seq_id": "bgl_26863",
+      "detector": "lstm_seed42"
+    },
+    "llm_raw_response": "{\n  \"diagnosis\": \"The system is experiencing DDR errors, which are being detected and corrected.\",\n  \"cited_evidence_ids\": [\"[] INFO bgl: total of <*> ddr error(s) detected and corrected\"],\n  \"decision\": \"answer\",\n  \"confidence\": 1.0\n}",
+    "llm_output": {
+      "diagnosis": "The system is experiencing DDR errors, which are being detected and corrected.",
+      "cited_evidence_ids": [
+        "[] INFO bgl: total of <*> ddr error(s) detected and corrected"
+      ],
+      "decision": "answer",
+      "confidence": 1.0
+    },
+    "gate": {
+      "llm_decision": "answer",
+      "gate_decision": "abstain",
+      "gate_overrode_llm": true,
+      "n_cited": 1,
+      "evidence_coverage": 0.0,
+      "unsupported_claim": true,
+      "confidence": 1.0
+    },
+    "parse_error": null
+  },
+  {
+    "case_id": "bgl_bgl_5057",
+    "source": "bgl",
+    "ground_truth": {
+      "label": "anomaly",
+      "seq_id": "bgl_5057",
+      "detector": "lstm_seed42"
+    },
+    "llm_raw_response": "{\n  \"diagnosis\": \"The system is experiencing repeated data storage interrupts, but the instruction addresses are not provided, making it difficult to pinpoint the root cause.\",\n  \"cited_evidence_ids\": [\"[] INFO bgl: data storage interrupt\", \"[] INFO bgl: instruction address: <*>\"],\n  \"decision\": \"abstain\",\n  \"confidence\": 0.5\n}",
+    "llm_output": {
+      "diagnosis": "The system is experiencing repeated data storage interrupts, but the instruction addresses are not provided, making it difficult to pinpoint the root cause.",
+      "cited_evidence_ids": [
+        "[] INFO bgl: data storage interrupt",
+        "[] INFO bgl: instruction address: <*>"
+      ],
+      "decision": "abstain",
+      "confidence": 0.5
+    },
+    "gate": {
+      "llm_decision": "abstain",
+      "gate_decision": "abstain",
+      "gate_overrode_llm": false,
+      "n_cited": 2,
+      "evidence_coverage": 0.0,
+      "unsupported_claim": false,
+      "confidence": 0.5
+    },
+    "parse_error": null
+  },
+  {
+    "case_id": "bgl_bgl_3273",
+    "source": "bgl",
+    "ground_truth": {
+      "label": "anomaly",
+      "seq_id": "bgl_3273",
+      "detector": "lstm_seed42"
+    },
+    "llm_raw_response": "{\n  \"diagnosis\": \"The system is experiencing a data TLB error interrupt, but the evidence does not provide any additional context or details to determine the root cause.\",\n  \"cited_evidence_ids\": [\"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\", \"8\", \"9\", \"10\", \"11\", \"12\", \"13\", \"14\"],\n  \"decision\": \"abstain\",\n  \"confidence\": 0.0\n}",
+    "llm_output": {
+      "diagnosis": "The system is experiencing a data TLB error interrupt, but the evidence does not provide any additional context or details to determine the root cause.",
+      "cited_evidence_ids": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14"
+      ],
+      "decision": "abstain",
+      "confidence": 0.0
+    },
+    "gate": {
+      "llm_decision": "abstain",
+      "gate_decision": "abstain",
+      "gate_overrode_llm": false,
+      "n_cited": 14,
+      "evidence_coverage": 0.0,
+      "unsupported_claim": false,
+      "confidence": 0.0
+    },
+    "parse_error": null
+  },
+  {
+    "case_id": "thunderbird_thunderbird_44926",
+    "source": "thunderbird",
+    "ground_truth": {
+      "label": "anomaly",
+      "seq_id": "thunderbird_44926",
+      "detector": "lstm_seed42"
+    },
+    "llm_raw_response": "{\n  \"diagnosis\": \"The InfiniHost0 port 1 QPN 0 is in a FATAL state, and the mad_process failed for this port.\",\n  \"cited_evidence_ids\": [\"[] INFO thunderbird: [KERNEL_IB][ib_mad_dispatch][<PATH>:292]mad_process failed (0) for InfiniHost0 port 1 QPN 0 (class 0x81, aid <*>\"],\n  \"decision\": \"answer\",\n  \"confidence\": 1.0\n}",
+    "llm_output": {
+      "diagnosis": "The InfiniHost0 port 1 QPN 0 is in a FATAL state, and the mad_process failed for this port.",
+      "cited_evidence_ids": [
+        "[] INFO thunderbird: [KERNEL_IB][ib_mad_dispatch][<PATH>:292]mad_process failed (0) for InfiniHost0 port 1 QPN 0 (class 0x81, aid <*>"
+      ],
+      "decision": "answer",
+      "confidence": 1.0
+    },
+    "gate": {
+      "llm_decision": "answer",
+      "gate_decision": "abstain",
+      "gate_overrode_llm": true,
+      "n_cited": 1,
+      "evidence_coverage": 0.0,
+      "unsupported_claim": true,
+      "confidence": 1.0
+    },
+    "parse_error": null
+  },
+  {
+    "case_id": "thunderbird_thunderbird_63083",
+    "source": "thunderbird",
+    "ground_truth": {
+      "label": "anomaly",
+      "seq_id": "thunderbird_63083",
+      "detector": "lstm_seed42"
+    },
+    "llm_raw_response": "{\n  \"diagnosis\": \"The root cause of the incident is likely a network connectivity issue, as indicated by the repeated failures to GetNodeInfo() and the lack of responses from data sources.\",\n  \"cited_evidence_ids\": [\"[] INFO thunderbird: [ib_sm_discovery.c:470]: Failed to GetNodeInfo() because of NO RESPONSE\", \"[] INFO thunderbird: data_thread() got not answer from any <*> datasource\"],\n  \"decision\": \"answer\",\n  \"confidence\": 0.8\n}",
+    "llm_output": {
+      "diagnosis": "The root cause of the incident is likely a network connectivity issue, as indicated by the repeated failures to GetNodeInfo() and the lack of responses from data sources.",
+      "cited_evidence_ids": [
+        "[] INFO thunderbird: [ib_sm_discovery.c:470]: Failed to GetNodeInfo() because of NO RESPONSE",
+        "[] INFO thunderbird: data_thread() got not answer from any <*> datasource"
+      ],
+      "decision": "answer",
+      "confidence": 0.8
+    },
+    "gate": {
+      "llm_decision": "answer",
+      "gate_decision": "abstain",
+      "gate_overrode_llm": true,
+      "n_cited": 2,
+      "evidence_coverage": 0.0,
+      "unsupported_claim": true,
+      "confidence": 0.8
+    },
+    "parse_error": null
+  },
+  {
+    "case_id": "thunderbird_thunderbird_40012",
+    "source": "thunderbird",
+    "ground_truth": {
+      "label": "anomaly",
+      "seq_id": "thunderbird_40012",
+      "detector": "lstm_seed42"
+    },
+    "llm_raw_response": "{\n  \"diagnosis\": \"The InfiniHost0 port 1 QPN 0 is experiencing a fatal error, likely due to a hardware or connectivity issue.\",\n  \"cited_evidence_ids\": [\"[KERNEL_IB][ib_mad_dispatch][<PATH>:292]mad_process failed (0) for InfiniHost0 port 1 QPN 0 (class 0x81, aid <*>\", \"[KERNEL_IB][ib_mad_dispatch][<PATH>:292]mad_process failed (0) for InfiniHost0 port 1 QPN 0 (class 0x81, aid <*>\"],\n  \"decision\": \"answer\",\n  \"confidence\": 0.8\n}",
+    "llm_output": {
+      "diagnosis": "The InfiniHost0 port 1 QPN 0 is experiencing a fatal error, likely due to a hardware or connectivity issue.",
+      "cited_evidence_ids": [
+        "[KERNEL_IB][ib_mad_dispatch][<PATH>:292]mad_process failed (0) for InfiniHost0 port 1 QPN 0 (class 0x81, aid <*>",
+        "[KERNEL_IB][ib_mad_dispatch][<PATH>:292]mad_process failed (0) for InfiniHost0 port 1 QPN 0 (class 0x81, aid <*>"
+      ],
+      "decision": "answer",
+      "confidence": 0.8
+    },
+    "gate": {
+      "llm_decision": "answer",
+      "gate_decision": "abstain",
+      "gate_overrode_llm": true,
+      "n_cited": 2,
+      "evidence_coverage": 0.0,
+      "unsupported_claim": true,
+      "confidence": 0.8
+    },
+    "parse_error": null
+  },
+  {
+    "case_id": "thunderbird_thunderbird_30660",
+    "source": "thunderbird",
+    "ground_truth": {
+      "label": "anomaly",
+      "seq_id": "thunderbird_30660",
+      "detector": "lstm_seed42"
+    },
+    "llm_raw_response": "{\n  \"diagnosis\": \"The InfiniHost0 device is in a FATAL state, and the mad_process failed for port 1 QPN 0.\",\n  \"cited_evidence_ids\": [\"[] INFO thunderbird: THH(1): <*> <*> Device in FATAL state\", \"[] INFO thunderbird: [KERNEL_IB][ib_mad_dispatch][<PATH>:292]mad_process failed (0) for InfiniHost0 port 1 QPN 0\"],\n  \"decision\": \"answer\",\n  \"confidence\": 1.0\n}",
+    "llm_output": {
+      "diagnosis": "The InfiniHost0 device is in a FATAL state, and the mad_process failed for port 1 QPN 0.",
+      "cited_evidence_ids": [
+        "[] INFO thunderbird: THH(1): <*> <*> Device in FATAL state",
+        "[] INFO thunderbird: [KERNEL_IB][ib_mad_dispatch][<PATH>:292]mad_process failed (0) for InfiniHost0 port 1 QPN 0"
+      ],
+      "decision": "answer",
+      "confidence": 1.0
+    },
+    "gate": {
+      "llm_decision": "answer",
+      "gate_decision": "abstain",
+      "gate_overrode_llm": true,
+      "n_cited": 2,
+      "evidence_coverage": 0.0,
+      "unsupported_claim": true,
+      "confidence": 1.0
+    },
+    "parse_error": null
+  }
+]

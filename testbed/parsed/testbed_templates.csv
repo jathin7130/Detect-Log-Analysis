@@ -1,0 +1,23 @@
+event_id,template,occurrences
+1,"service started, version=1.0",6
+2,received checkout request <*> client_ip=<IP>,245
+3,checkout completed successfully <*>,211
+4,orders service returned <*> <*>,32
+5,fault armed <*> <*>,8
+6,"downstream call to <*> exceeded timeout threshold, retrying",5
+7,checkout aborted before dispatch <*>,2
+8,stock check ok <*> <*>,216
+9,database connection failed: could not connect to postgres backend,18
+10,stock check failed for item <*>,13
+11,"unhandled exception in request handler, process terminating",2
+12,high memory usage detected: <*> of limit,13
+13,checking inventory for order <*>,230
+14,charging payment for order <*>,216
+15,order placed successfully <*> <*>,211
+16,inventory service returned 503 <*>,13
+17,"order placement aborted, upstream degradation <*>",13
+18,payments service returned 503 <*>,4
+19,inventory service call failed: ConnectionError request_id=77ac17bf,1
+20,payments service call failed: ConnectionError request_id=f6321548,1
+21,payment authorized <*> <*> <*>,211
+22,payment authorization failed <*>,4

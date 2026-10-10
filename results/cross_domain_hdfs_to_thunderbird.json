@@ -1,0 +1,39 @@
+{
+  "source": "hdfs",
+  "target": "thunderbird",
+  "seed": 42,
+  "n_adapt": 14970,
+  "n_val": 14970,
+  "n_test": 69868,
+  "note": "With 100% vocabulary collapse (see cross_domain_build manifests), every window is an identical constant input, so the model's prediction is constant across all sequences. The precision/recall/F1 threshold-selection can then only express 'flag everyone' regardless of whether the model's constant prediction is 'miss' (before) or 'hit' (after adaptation) -- so thresholded P/R/F1 can look identical even though the model genuinely changed. mean_raw_score (not threshold-dependent) is the reliable signal: it should swing from ~1.0 (always 'miss'/anomalous) before adaptation toward ~0.0 (always 'hit'/normal) after, since the model was fine-tuned exclusively on normal target sequences.",
+  "before_adaptation": {
+    "threshold": 1.0,
+    "tp": 26801,
+    "fp": 43067,
+    "fn": 0,
+    "tn": 0,
+    "precision": 0.38359477872559683,
+    "recall": 1.0,
+    "f1": 0.5544900640329371,
+    "pr_auc": 0.38359477872559683,
+    "false_positive_rate": 1.0,
+    "false_alarms_per_10k_events": 6164.052212744031,
+    "n_total": 69868,
+    "mean_raw_score": 1.0
+  },
+  "after_adaptation": {
+    "threshold": 0.0,
+    "tp": 26801,
+    "fp": 43067,
+    "fn": 0,
+    "tn": 0,
+    "precision": 0.38359477872559683,
+    "recall": 1.0,
+    "f1": 0.5544900640329371,
+    "pr_auc": 0.38359477872559683,
+    "false_positive_rate": 1.0,
+    "false_alarms_per_10k_events": 6164.052212744031,
+    "n_total": 69868,
+    "mean_raw_score": 0.0
+  }
+}

@@ -1,0 +1,7 @@
+=== evaluating lstm hdfs seed=42 Wed Oct  7 22:48:47 GMTDT 2026 ===
+=== evaluating lstm hdfs seed=123 Wed Oct  7 22:49:26 GMTDT 2026 ===
+=== evaluating lstm hdfs seed=777 Wed Oct  7 22:50:05 GMTDT 2026 ===
+=== evaluating lstm bgl seed=42 Wed Oct  7 22:50:41 GMTDT 2026 ===
+=== evaluating lstm bgl seed=123 Wed Oct  7 22:51:00 GMTDT 2026 ===
+=== evaluating lstm bgl seed=777 Wed Oct  7 22:51:17 GMTDT 2026 ===
+ALL EVAL RUNS DONE

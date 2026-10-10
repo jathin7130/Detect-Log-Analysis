@@ -1,0 +1,1 @@
+[thunderbird] lstm seed=123: P=0.733 R=0.904 F1=0.810 PR-AUC=0.772 FA/10k=1263.6 -> C:\Users\tejan\OneDrive\Desktop\drive\devops-log-analysis\results\thunderbird_lstm_seed123_eval.json

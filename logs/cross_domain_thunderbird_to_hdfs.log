@@ -1,0 +1,3 @@
+config file not found: drain3.ini
+[thunderbird] rebuilt template miner from 9,980,758 lines (1467 clusters) in 216.1s
+[thunderbird->hdfs] 575061 sequences, unseen_rate=100.0% -> C:\Users\tejan\OneDrive\Desktop\drive\devops-log-analysis\data\cross_domain\thunderbird_to_hdfs.csv

@@ -1,0 +1,9 @@
+[hdfs] seed=123 device=cuda mixed_precision=True window_size=5 smoke_test=False
+[hdfs] train_windows=5,666,992 val_windows=1,212,245 vocab_size=44
+[hdfs] epoch 1/12 train_loss=0.3609 val_loss=0.3141 val_acc=0.8983 (184.7s elapsed)
+[hdfs] epoch 2/12 train_loss=0.3132 val_loss=0.3109 val_acc=0.8996 (384.0s elapsed)
+[hdfs] epoch 3/12 train_loss=0.3117 val_loss=0.3102 val_acc=0.8998 (576.3s elapsed)
+[hdfs] epoch 4/12 train_loss=0.3110 val_loss=0.3101 val_acc=0.8997 (767.9s elapsed)
+[hdfs] epoch 5/12 train_loss=0.3107 val_loss=0.3100 val_acc=0.8998 (960.3s elapsed)
+[hdfs] early stopping at epoch 5 (no val_loss improvement for 2 epochs)
+[hdfs] done. best_val_loss=0.3102 -> C:\Users\tejan\OneDrive\Desktop\drive\devops-log-analysis\models\hdfs_lstm_seed123.pt, C:\Users\tejan\OneDrive\Desktop\drive\devops-log-analysis\results\hdfs_lstm_seed123_history.json

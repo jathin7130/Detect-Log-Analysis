@@ -1,0 +1,1 @@
+[hdfs] lstm seed=123: P=0.247 R=0.283 F1=0.264 PR-AUC=0.135 FA/10k=251.8 -> C:\Users\tejan\OneDrive\Desktop\drive\devops-log-analysis\results\hdfs_lstm_seed123_eval.json

@@ -1,0 +1,13 @@
+{
+  "dataset": "bgl",
+  "model_a": "lstm",
+  "model_b": "isolation_forest",
+  "f1_a": 0.9318181818181819,
+  "f1_b": 0.3251681075888568,
+  "n_bootstrap": 2000,
+  "mean_diff": 0.606377780023244,
+  "ci95_low": 0.5851013966555156,
+  "ci95_high": 0.6266339284739285,
+  "p_value": 0.0,
+  "significant_at_0.05": true
+}

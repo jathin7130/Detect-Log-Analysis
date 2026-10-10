@@ -1,0 +1,26 @@
+{
+  "dataset": "hdfs",
+  "seed": 42,
+  "variant": "combined",
+  "best_val_loss": 3.5925488471984863,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 3.7954478867848715,
+      "val_loss": 3.756265640258789,
+      "val_acc": 0.016
+    },
+    {
+      "epoch": 2,
+      "train_loss": 3.7411477858225504,
+      "val_loss": 3.6909022331237793,
+      "val_acc": 0.086
+    },
+    {
+      "epoch": 3,
+      "train_loss": 3.67481507174174,
+      "val_loss": 3.5925488471984863,
+      "val_acc": 0.42
+    }
+  ]
+}

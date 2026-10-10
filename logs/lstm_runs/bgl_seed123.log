@@ -1,0 +1,15 @@
+[bgl] seed=123 device=cuda mixed_precision=True window_size=5 smoke_test=False
+[bgl] train_windows=2,813,520 val_windows=602,870 vocab_size=1819
+[bgl] epoch 1/12 train_loss=0.3767 val_loss=0.1703 val_acc=0.9326 (82.3s elapsed)
+[bgl] epoch 2/12 train_loss=0.1575 val_loss=0.1504 val_acc=0.9409 (161.3s elapsed)
+[bgl] epoch 3/12 train_loss=0.1478 val_loss=0.1467 val_acc=0.9412 (238.0s elapsed)
+[bgl] epoch 4/12 train_loss=0.1444 val_loss=0.1452 val_acc=0.9422 (317.3s elapsed)
+[bgl] epoch 5/12 train_loss=0.1423 val_loss=0.1434 val_acc=0.9423 (396.6s elapsed)
+[bgl] epoch 6/12 train_loss=0.1410 val_loss=0.1432 val_acc=0.9411 (474.2s elapsed)
+[bgl] epoch 7/12 train_loss=0.1400 val_loss=0.1424 val_acc=0.9431 (551.2s elapsed)
+[bgl] epoch 8/12 train_loss=0.1393 val_loss=0.1419 val_acc=0.9428 (631.0s elapsed)
+[bgl] epoch 9/12 train_loss=0.1386 val_loss=0.1418 val_acc=0.9428 (711.5s elapsed)
+[bgl] epoch 10/12 train_loss=0.1381 val_loss=0.1421 val_acc=0.9426 (784.3s elapsed)
+[bgl] epoch 11/12 train_loss=0.1377 val_loss=0.1421 val_acc=0.9428 (858.9s elapsed)
+[bgl] early stopping at epoch 11 (no val_loss improvement for 2 epochs)
+[bgl] done. best_val_loss=0.1418 -> C:\Users\tejan\OneDrive\Desktop\drive\devops-log-analysis\models\bgl_lstm_seed123.pt, C:\Users\tejan\OneDrive\Desktop\drive\devops-log-analysis\results\bgl_lstm_seed123_history.json

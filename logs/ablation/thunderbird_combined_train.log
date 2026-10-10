@@ -1,0 +1,15 @@
+[thunderbird] combined-ablation seed=42 device=cuda mixed_precision=True window_size=5
+[thunderbird] train_windows=4,091,228 val_windows=876,660 vocab_size=1467
+[thunderbird] epoch 1/12 train_loss=1.5546 val_loss=1.0056 val_acc=0.7128 (134.5s elapsed)
+[thunderbird] epoch 2/12 train_loss=0.9933 val_loss=0.9498 val_acc=0.7205 (269.2s elapsed)
+[thunderbird] epoch 3/12 train_loss=0.9553 val_loss=0.9288 val_acc=0.7226 (405.1s elapsed)
+[thunderbird] epoch 4/12 train_loss=0.9374 val_loss=0.9191 val_acc=0.7235 (540.0s elapsed)
+[thunderbird] epoch 5/12 train_loss=0.9266 val_loss=0.9134 val_acc=0.7249 (674.9s elapsed)
+[thunderbird] epoch 6/12 train_loss=0.9188 val_loss=0.9068 val_acc=0.7247 (811.4s elapsed)
+[thunderbird] epoch 7/12 train_loss=0.9129 val_loss=0.9038 val_acc=0.7256 (944.5s elapsed)
+[thunderbird] epoch 8/12 train_loss=0.9085 val_loss=0.9010 val_acc=0.7265 (1078.7s elapsed)
+[thunderbird] epoch 9/12 train_loss=0.9047 val_loss=0.9012 val_acc=0.7258 (1213.0s elapsed)
+[thunderbird] epoch 10/12 train_loss=0.9014 val_loss=0.8986 val_acc=0.7265 (1348.6s elapsed)
+[thunderbird] epoch 11/12 train_loss=0.8988 val_loss=0.8969 val_acc=0.7256 (1482.3s elapsed)
+[thunderbird] epoch 12/12 train_loss=0.8963 val_loss=0.8954 val_acc=0.7263 (1618.1s elapsed)
+[thunderbird] done. best_val_loss=0.8954 -> C:\Users\tejan\OneDrive\Desktop\drive\devops-log-analysis\models\thunderbird_lstm_combined_seed42.pt

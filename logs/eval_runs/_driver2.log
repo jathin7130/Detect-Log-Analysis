@@ -1,0 +1,10 @@
+=== evaluating lstm hdfs seed=42 Wed Oct  7 23:51:30 GMTDT 2026 ===
+=== evaluating lstm hdfs seed=123 Wed Oct  7 23:52:08 GMTDT 2026 ===
+=== evaluating lstm hdfs seed=777 Wed Oct  7 23:52:49 GMTDT 2026 ===
+=== evaluating lstm bgl seed=42 Wed Oct  7 23:53:33 GMTDT 2026 ===
+=== evaluating lstm bgl seed=123 Wed Oct  7 23:53:52 GMTDT 2026 ===
+=== evaluating lstm bgl seed=777 Wed Oct  7 23:54:11 GMTDT 2026 ===
+=== evaluating lstm thunderbird seed=42 Wed Oct  7 23:54:29 GMTDT 2026 ===
+=== evaluating lstm thunderbird seed=123 Wed Oct  7 23:55:00 GMTDT 2026 ===
+=== evaluating lstm thunderbird seed=777 Wed Oct  7 23:55:31 GMTDT 2026 ===
+ALL EVAL RUNS DONE

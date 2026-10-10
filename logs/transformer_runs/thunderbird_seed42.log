@@ -1,0 +1,15 @@
+[thunderbird] seed=42 device=cuda mixed_precision=True window_size=5 smoke_test=False
+[thunderbird] train_windows=4,091,228 val_windows=876,660 vocab_size=1467
+[thunderbird] epoch 1/12 train_loss=1.3120 val_loss=0.9762 val_acc=0.7167 (125.1s elapsed)
+[thunderbird] epoch 2/12 train_loss=0.9813 val_loss=0.9418 val_acc=0.7204 (249.5s elapsed)
+[thunderbird] epoch 3/12 train_loss=0.9552 val_loss=0.9288 val_acc=0.7217 (374.6s elapsed)
+[thunderbird] epoch 4/12 train_loss=0.9425 val_loss=0.9203 val_acc=0.7237 (498.0s elapsed)
+[thunderbird] epoch 5/12 train_loss=0.9343 val_loss=0.9168 val_acc=0.7240 (621.4s elapsed)
+[thunderbird] epoch 6/12 train_loss=0.9286 val_loss=0.9127 val_acc=0.7236 (745.9s elapsed)
+[thunderbird] epoch 7/12 train_loss=0.9242 val_loss=0.9114 val_acc=0.7240 (869.2s elapsed)
+[thunderbird] epoch 8/12 train_loss=0.9207 val_loss=0.9086 val_acc=0.7253 (992.8s elapsed)
+[thunderbird] epoch 9/12 train_loss=0.9172 val_loss=0.9066 val_acc=0.7248 (1116.4s elapsed)
+[thunderbird] epoch 10/12 train_loss=0.9149 val_loss=0.9041 val_acc=0.7252 (1240.9s elapsed)
+[thunderbird] epoch 11/12 train_loss=0.9127 val_loss=0.9050 val_acc=0.7254 (1364.8s elapsed)
+[thunderbird] epoch 12/12 train_loss=0.9107 val_loss=0.9013 val_acc=0.7257 (1488.6s elapsed)
+[thunderbird] done. best_val_loss=0.9013 -> C:\Users\tejan\OneDrive\Desktop\drive\devops-log-analysis\models\thunderbird_transformer_seed42.pt, C:\Users\tejan\OneDrive\Desktop\drive\devops-log-analysis\results\thunderbird_transformer_seed42_history.json

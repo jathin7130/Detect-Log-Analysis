@@ -1,0 +1,19 @@
+=== evaluating lstm hdfs seed=42 Thu Oct  8 02:44:13 GMTDT 2026 ===
+=== evaluating lstm hdfs seed=123 Thu Oct  8 02:44:51 GMTDT 2026 ===
+=== evaluating lstm hdfs seed=777 Thu Oct  8 02:45:27 GMTDT 2026 ===
+=== evaluating lstm bgl seed=42 Thu Oct  8 02:46:04 GMTDT 2026 ===
+=== evaluating lstm bgl seed=123 Thu Oct  8 02:46:21 GMTDT 2026 ===
+=== evaluating lstm bgl seed=777 Thu Oct  8 02:46:39 GMTDT 2026 ===
+=== evaluating lstm thunderbird seed=42 Thu Oct  8 02:46:57 GMTDT 2026 ===
+=== evaluating lstm thunderbird seed=123 Thu Oct  8 02:47:26 GMTDT 2026 ===
+=== evaluating lstm thunderbird seed=777 Thu Oct  8 02:47:55 GMTDT 2026 ===
+=== evaluating transformer hdfs seed=42 Thu Oct  8 02:48:23 GMTDT 2026 ===
+=== evaluating transformer hdfs seed=123 Thu Oct  8 02:48:57 GMTDT 2026 ===
+=== evaluating transformer hdfs seed=777 Thu Oct  8 02:49:31 GMTDT 2026 ===
+=== evaluating transformer bgl seed=42 Thu Oct  8 02:50:05 GMTDT 2026 ===
+=== evaluating transformer bgl seed=123 Thu Oct  8 02:50:21 GMTDT 2026 ===
+=== evaluating transformer bgl seed=777 Thu Oct  8 02:50:37 GMTDT 2026 ===
+=== evaluating transformer thunderbird seed=42 Thu Oct  8 02:50:53 GMTDT 2026 ===
+=== evaluating transformer thunderbird seed=123 Thu Oct  8 02:51:19 GMTDT 2026 ===
+=== evaluating transformer thunderbird seed=777 Thu Oct  8 02:51:44 GMTDT 2026 ===
+ALL EVAL RUNS DONE

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>devops-log-intel // dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/css/style.css?v=6">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand"><span class="dot"></span> devops-log-intel</div>
+  <nav>
+    <a href="/" class="active">dashboard</a>
+    <a href="/demo">demo</a>
+    <a href="/phases">phases</a>
+  </nav>
+  <div class="meta">HDFS / BGL / Thunderbird <span id="clock"></span></div>
+</div>
+
+<div class="page">
+
+  <div class="section-title">overview</div>
+  <div class="grid" id="overview-cards">
+    <div class="panel stat-card"><div class="label">datasets</div><div class="value">3</div><div class="sub">HDFS / BGL / Thunderbird</div></div>
+    <div class="panel stat-card"><div class="label">detectors evaluated</div><div class="value">5</div><div class="sub">IF, RF, LSTM, Transformer, LSTM+sem</div></div>
+    <div class="panel stat-card"><div class="label">cross-domain pairs</div><div class="value">6/6</div><div class="sub"><span class="badge badge-bad">100% vocab disjunction</span></div></div>
+    <div class="panel stat-card"><div class="label">testbed incidents</div><div class="value">8</div><div class="sub">4 fault types, ground-truth recorded</div></div>
+    <div class="panel stat-card"><div class="label">RCA cases hand-checked</div><div class="value" id="rca-correct">—</div><div class="sub" id="rca-sub">local llama3.1:8b + reliability gate</div></div>
+  </div>
+
+  <div class="section-title">detector comparison (F1, by dataset)</div>
+  <div class="grid-wide" id="detector-charts"></div>
+
+  <div class="section-title">drift robustness — false positive rate, clean vs. drifted</div>
+  <div class="panel">
+    <table id="drift-table">
+      <thead><tr><th>dataset</th><th>fpr (clean)</th><th>fpr (drifted)</th><th>relative increase</th><th>severity</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <div class="section-title">cross-domain transfer matrix</div>
+  <div class="panel">
+    <table id="cross-domain-table">
+      <thead><tr><th>source → target</th><th>unseen rate</th><th>mean score (before)</th><th>mean score (after adapt)</th><th>note</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <div class="section-title">fault-injection testbed — recorded incidents</div>
+  <div class="panel">
+    <table id="testbed-table">
+      <thead><tr><th>time</th><th>service</th><th>fault type</th><th>duration</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <div class="footer-note">
+    Detector metrics are real (Phase 2/3 results, mean ± 95% CI across 3 seeds where applicable). RCA + reliability-gate output is also real (Phase 7, local llama3.1:8b) — browse all 20 hand-checked cases on the <a href="/demo">demo</a> page.
+  </div>
+
+</div>
+
+<script src="/static/js/dashboard.js?v=2"></script>
+</body>
+</html>

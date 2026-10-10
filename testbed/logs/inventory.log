@@ -1,0 +1,249 @@
+2026-10-07 21:41:19 INFO inventory: service started, version=1.0
+2026-10-07 21:41:26 INFO inventory: stock check ok sku=8640 request_id=21a52037
+2026-10-07 21:41:27 INFO inventory: stock check ok sku=6118 request_id=cedc74a2
+2026-10-07 21:41:29 INFO inventory: stock check ok sku=1625 request_id=5ab1b694
+2026-10-07 21:41:30 INFO inventory: stock check ok sku=8037 request_id=7bcda1b5
+2026-10-07 21:41:31 INFO inventory: stock check ok sku=1313 request_id=57bf2806
+2026-10-07 21:41:32 INFO inventory: stock check ok sku=8051 request_id=87b7a74a
+2026-10-07 21:41:33 INFO inventory: stock check ok sku=3927 request_id=4bd283a6
+2026-10-07 21:41:34 INFO inventory: stock check ok sku=5041 request_id=26229311
+2026-10-07 21:41:35 INFO inventory: stock check ok sku=7201 request_id=3df163a0
+2026-10-07 21:41:36 INFO inventory: stock check ok sku=6669 request_id=395bbb59
+2026-10-07 21:41:37 INFO inventory: stock check ok sku=1134 request_id=4b755231
+2026-10-07 21:41:38 INFO inventory: stock check ok sku=7659 request_id=65563d36
+2026-10-07 21:41:39 INFO inventory: stock check ok sku=9590 request_id=dc94b79c
+2026-10-07 21:41:40 INFO inventory: stock check ok sku=3488 request_id=0caaed08
+2026-10-07 21:41:41 INFO inventory: stock check ok sku=7052 request_id=7d9bed9b
+2026-10-07 21:41:42 INFO inventory: stock check ok sku=8221 request_id=e7ff3309
+2026-10-07 21:41:43 INFO inventory: stock check ok sku=2852 request_id=20811fc6
+2026-10-07 21:41:44 INFO inventory: stock check ok sku=7610 request_id=2111e1f6
+2026-10-07 21:41:45 INFO inventory: stock check ok sku=1273 request_id=f26a90cb
+2026-10-07 21:41:46 INFO inventory: stock check ok sku=1466 request_id=db3b7018
+2026-10-07 21:41:46 INFO inventory: fault armed type=db_failure duration_s=8
+2026-10-07 21:41:47 ERROR inventory: database connection failed: could not connect to postgres backend
+2026-10-07 21:41:47 ERROR inventory: stock check failed for item request_id=df729cd3
+2026-10-07 21:41:48 ERROR inventory: database connection failed: could not connect to postgres backend
+2026-10-07 21:41:48 ERROR inventory: stock check failed for item request_id=b6f7f733
+2026-10-07 21:41:49 ERROR inventory: database connection failed: could not connect to postgres backend
+2026-10-07 21:41:49 ERROR inventory: stock check failed for item request_id=f50340c5
+2026-10-07 21:41:50 ERROR inventory: database connection failed: could not connect to postgres backend
+2026-10-07 21:41:50 ERROR inventory: stock check failed for item request_id=b0710731
+2026-10-07 21:41:51 ERROR inventory: database connection failed: could not connect to postgres backend
+2026-10-07 21:41:51 ERROR inventory: stock check failed for item request_id=db1a17f2
+2026-10-07 21:41:52 ERROR inventory: database connection failed: could not connect to postgres backend
+2026-10-07 21:41:52 ERROR inventory: stock check failed for item request_id=75d35576
+2026-10-07 21:41:53 ERROR inventory: database connection failed: could not connect to postgres backend
+2026-10-07 21:41:53 ERROR inventory: stock check failed for item request_id=6c45fe23
+2026-10-07 21:41:54 ERROR inventory: database connection failed: could not connect to postgres backend
+2026-10-07 21:41:54 ERROR inventory: stock check failed for item request_id=f244aef7
+2026-10-07 21:41:55 INFO inventory: stock check ok sku=8926 request_id=69d4dcc5
+2026-10-07 21:41:56 INFO inventory: stock check ok sku=1361 request_id=05e63cf9
+2026-10-07 21:41:57 INFO inventory: stock check ok sku=8977 request_id=437e5dda
+2026-10-07 21:41:58 INFO inventory: stock check ok sku=6834 request_id=e85040f6
+2026-10-07 21:41:59 INFO inventory: stock check ok sku=8456 request_id=22508182
+2026-10-07 21:42:00 INFO inventory: stock check ok sku=1305 request_id=e6a8307e
+2026-10-07 21:42:02 INFO inventory: stock check ok sku=5530 request_id=a91e769a
+2026-10-07 21:42:03 INFO inventory: stock check ok sku=7720 request_id=1df73d0d
+2026-10-07 21:42:04 INFO inventory: stock check ok sku=7034 request_id=36d0fdaf
+2026-10-07 21:42:05 INFO inventory: stock check ok sku=6021 request_id=4d0c5809
+2026-10-07 21:42:06 INFO inventory: stock check ok sku=8285 request_id=2837524b
+2026-10-07 21:42:07 INFO inventory: stock check ok sku=9973 request_id=8d0beba9
+2026-10-07 21:42:08 INFO inventory: stock check ok sku=4209 request_id=723f2ce9
+2026-10-07 21:42:09 INFO inventory: stock check ok sku=9613 request_id=366a6a75
+2026-10-07 21:42:10 INFO inventory: stock check ok sku=6786 request_id=9d5b0f15
+2026-10-07 21:42:11 INFO inventory: stock check ok sku=1980 request_id=aec6c7b3
+2026-10-07 21:42:12 INFO inventory: stock check ok sku=4614 request_id=87b4d579
+2026-10-07 21:42:13 INFO inventory: stock check ok sku=5680 request_id=8bdd6acd
+2026-10-07 21:42:14 INFO inventory: stock check ok sku=5187 request_id=0f478808
+2026-10-07 21:42:15 INFO inventory: stock check ok sku=6840 request_id=f8eab4cf
+2026-10-07 21:42:16 INFO inventory: stock check ok sku=1932 request_id=9f624dca
+2026-10-07 21:42:28 INFO inventory: stock check ok sku=6531 request_id=517f5db5
+2026-10-07 21:42:29 INFO inventory: stock check ok sku=7383 request_id=d172b88e
+2026-10-07 21:42:30 INFO inventory: stock check ok sku=7405 request_id=2e8b1206
+2026-10-07 21:42:31 INFO inventory: stock check ok sku=3764 request_id=a736822e
+2026-10-07 21:42:33 INFO inventory: stock check ok sku=1386 request_id=ae0cedef
+2026-10-07 21:42:34 INFO inventory: stock check ok sku=1762 request_id=b886ed7b
+2026-10-07 21:42:35 INFO inventory: stock check ok sku=7226 request_id=a1c65ce1
+2026-10-07 21:42:36 INFO inventory: stock check ok sku=4303 request_id=67612681
+2026-10-07 21:42:37 INFO inventory: stock check ok sku=5150 request_id=47c71c92
+2026-10-07 21:42:38 INFO inventory: stock check ok sku=1286 request_id=c953d6ca
+2026-10-07 21:42:39 INFO inventory: stock check ok sku=7983 request_id=cd434c88
+2026-10-07 21:42:40 INFO inventory: stock check ok sku=1177 request_id=09df80d4
+2026-10-07 21:42:41 INFO inventory: stock check ok sku=6248 request_id=9c454c8e
+2026-10-07 21:42:42 INFO inventory: stock check ok sku=8596 request_id=74681bb1
+2026-10-07 21:42:43 INFO inventory: stock check ok sku=2158 request_id=37fc511b
+2026-10-07 21:42:44 INFO inventory: stock check ok sku=8197 request_id=0f3b67d5
+2026-10-07 21:42:45 INFO inventory: stock check ok sku=3412 request_id=7f2018db
+2026-10-07 21:42:46 INFO inventory: stock check ok sku=4829 request_id=6d136e48
+2026-10-07 21:42:47 INFO inventory: stock check ok sku=8559 request_id=edc4b3b0
+2026-10-07 21:42:48 INFO inventory: stock check ok sku=3414 request_id=af214c6a
+2026-10-07 21:42:49 INFO inventory: stock check ok sku=4569 request_id=99864255
+2026-10-07 21:42:50 INFO inventory: stock check ok sku=1738 request_id=f062382d
+2026-10-07 21:42:51 INFO inventory: stock check ok sku=6783 request_id=a7d33416
+2026-10-07 21:42:52 INFO inventory: stock check ok sku=6660 request_id=4a27fded
+2026-10-07 21:42:54 INFO inventory: stock check ok sku=7665 request_id=95189644
+2026-10-07 21:42:57 INFO inventory: stock check ok sku=3257 request_id=2ac8f24c
+2026-10-07 21:42:58 INFO inventory: stock check ok sku=3677 request_id=7e0c767c
+2026-10-07 21:43:01 INFO inventory: stock check ok sku=1424 request_id=3b622241
+2026-10-07 21:43:03 INFO inventory: stock check ok sku=4008 request_id=45270cb2
+2026-10-07 21:43:05 INFO inventory: stock check ok sku=3275 request_id=4ccfac3f
+2026-10-07 21:43:07 INFO inventory: stock check ok sku=2381 request_id=fa92e11d
+2026-10-07 21:43:08 INFO inventory: stock check ok sku=4212 request_id=c299798b
+2026-10-07 21:43:09 INFO inventory: stock check ok sku=4437 request_id=c3c636cb
+2026-10-07 21:43:10 INFO inventory: stock check ok sku=4980 request_id=7d2b8d79
+2026-10-07 21:43:11 INFO inventory: stock check ok sku=6431 request_id=3eb6bb13
+2026-10-07 21:43:12 INFO inventory: stock check ok sku=4623 request_id=29f499aa
+2026-10-07 21:43:13 INFO inventory: stock check ok sku=6179 request_id=d3ae9696
+2026-10-07 21:43:14 INFO inventory: stock check ok sku=3624 request_id=0e20b4f9
+2026-10-07 21:43:15 INFO inventory: stock check ok sku=9556 request_id=2ed350df
+2026-10-07 21:43:16 INFO inventory: stock check ok sku=2352 request_id=a4439942
+2026-10-07 21:43:18 INFO inventory: stock check ok sku=2412 request_id=1204d5d2
+2026-10-07 21:43:19 INFO inventory: stock check ok sku=1748 request_id=0a5cc924
+2026-10-07 21:43:20 INFO inventory: stock check ok sku=9666 request_id=5bfe0dcb
+2026-10-07 21:43:21 INFO inventory: stock check ok sku=1003 request_id=0af06ef4
+2026-10-07 21:43:22 INFO inventory: stock check ok sku=5557 request_id=d33799b2
+2026-10-07 21:43:23 INFO inventory: stock check ok sku=3715 request_id=97619111
+2026-10-07 21:43:24 INFO inventory: stock check ok sku=2496 request_id=61c23c9b
+2026-10-07 21:43:25 INFO inventory: stock check ok sku=3002 request_id=dc69e4c2
+2026-10-07 21:43:26 INFO inventory: stock check ok sku=1148 request_id=007a25bb
+2026-10-07 21:43:26 INFO inventory: fault armed type=pod_restart duration_s=5
+2026-10-07 21:43:27 ERROR inventory: unhandled exception in request handler, process terminating
+2026-10-07 21:43:28 INFO inventory: service started, version=1.0
+2026-10-07 21:43:28 INFO inventory: stock check ok sku=9191 request_id=b3b44b0d
+2026-10-07 21:43:29 INFO inventory: stock check ok sku=6804 request_id=5e77cce8
+2026-10-07 21:43:30 INFO inventory: stock check ok sku=9490 request_id=1b4846ec
+2026-10-07 21:43:31 INFO inventory: stock check ok sku=4742 request_id=5f746d76
+2026-10-07 21:43:32 INFO inventory: stock check ok sku=8187 request_id=ab938579
+2026-10-07 21:43:33 INFO inventory: stock check ok sku=9615 request_id=ff2bfe70
+2026-10-07 21:43:34 INFO inventory: stock check ok sku=9057 request_id=c253f90c
+2026-10-07 21:43:35 INFO inventory: stock check ok sku=4339 request_id=06c1127b
+2026-10-07 21:43:36 INFO inventory: stock check ok sku=5182 request_id=bbfc1bd4
+2026-10-07 21:43:37 INFO inventory: stock check ok sku=2745 request_id=3d75318e
+2026-10-07 21:43:38 INFO inventory: stock check ok sku=5772 request_id=1a69bbac
+2026-10-07 21:43:39 INFO inventory: stock check ok sku=1689 request_id=1ca51299
+2026-10-07 21:43:40 INFO inventory: stock check ok sku=5318 request_id=1e38d61c
+2026-10-07 21:43:41 INFO inventory: stock check ok sku=1579 request_id=6d1dbcb6
+2026-10-07 21:43:42 INFO inventory: stock check ok sku=5021 request_id=c561293a
+2026-10-07 21:43:43 INFO inventory: stock check ok sku=8406 request_id=a0a9c4f4
+2026-10-07 21:43:44 INFO inventory: stock check ok sku=7224 request_id=9f8a65f5
+2026-10-07 21:43:45 INFO inventory: stock check ok sku=7640 request_id=2ac46bec
+2026-10-07 21:43:46 INFO inventory: stock check ok sku=8332 request_id=e0400705
+2026-10-07 21:43:47 INFO inventory: stock check ok sku=4819 request_id=b69cdb15
+2026-10-07 21:43:48 INFO inventory: stock check ok sku=4323 request_id=0a4d19f8
+2026-10-07 21:43:50 INFO inventory: stock check ok sku=9999 request_id=3c520858
+2026-10-07 21:43:51 INFO inventory: stock check ok sku=2157 request_id=74cfd7db
+2026-10-07 21:43:52 INFO inventory: stock check ok sku=2543 request_id=5ba0ae6a
+2026-10-07 21:43:53 INFO inventory: stock check ok sku=3846 request_id=5b24bb9f
+2026-10-07 21:43:54 INFO inventory: stock check ok sku=4002 request_id=040c9b89
+2026-10-07 21:43:55 INFO inventory: stock check ok sku=9873 request_id=26d08cb1
+2026-10-07 21:43:56 INFO inventory: stock check ok sku=1429 request_id=ca0d55f9
+2026-10-07 21:44:07 INFO inventory: stock check ok sku=2837 request_id=ce9fef84
+2026-10-07 21:44:08 INFO inventory: stock check ok sku=9696 request_id=9c197b4f
+2026-10-07 21:44:09 INFO inventory: stock check ok sku=2754 request_id=2a020555
+2026-10-07 21:44:10 INFO inventory: stock check ok sku=8094 request_id=6d1b224c
+2026-10-07 21:44:11 INFO inventory: stock check ok sku=4862 request_id=4824f8cf
+2026-10-07 21:44:12 INFO inventory: stock check ok sku=7095 request_id=12689f82
+2026-10-07 21:44:13 INFO inventory: stock check ok sku=4668 request_id=11eec6e4
+2026-10-07 21:44:14 INFO inventory: stock check ok sku=1503 request_id=716b8a5f
+2026-10-07 21:44:15 INFO inventory: stock check ok sku=8086 request_id=5d3406dd
+2026-10-07 21:44:16 INFO inventory: stock check ok sku=2119 request_id=2858093c
+2026-10-07 21:44:17 INFO inventory: stock check ok sku=4336 request_id=387788f7
+2026-10-07 21:44:18 INFO inventory: stock check ok sku=7852 request_id=5f814fbe
+2026-10-07 21:44:19 INFO inventory: stock check ok sku=5432 request_id=7a9e2620
+2026-10-07 21:44:20 INFO inventory: stock check ok sku=2860 request_id=99ba287d
+2026-10-07 21:44:21 INFO inventory: stock check ok sku=3897 request_id=721f7078
+2026-10-07 21:44:22 INFO inventory: stock check ok sku=4453 request_id=f0c7a343
+2026-10-07 21:44:23 INFO inventory: stock check ok sku=9348 request_id=f522cb84
+2026-10-07 21:44:24 INFO inventory: stock check ok sku=1935 request_id=457c1d6d
+2026-10-07 21:44:25 INFO inventory: stock check ok sku=3012 request_id=cb6c6e55
+2026-10-07 21:44:27 INFO inventory: stock check ok sku=9738 request_id=2a73d9aa
+2026-10-07 21:44:28 INFO inventory: stock check ok sku=8477 request_id=a0e32792
+2026-10-07 21:44:29 INFO inventory: stock check ok sku=3474 request_id=13f1eb50
+2026-10-07 21:44:30 INFO inventory: stock check ok sku=4817 request_id=85033e90
+2026-10-07 21:44:31 INFO inventory: stock check ok sku=3303 request_id=5113d5aa
+2026-10-07 21:44:41 INFO inventory: stock check ok sku=1985 request_id=222ca4ec
+2026-10-07 21:44:42 INFO inventory: stock check ok sku=7266 request_id=5f792e0f
+2026-10-07 21:44:43 INFO inventory: stock check ok sku=1336 request_id=15832df7
+2026-10-07 21:44:44 INFO inventory: stock check ok sku=1553 request_id=e6c18755
+2026-10-07 21:44:45 INFO inventory: stock check ok sku=4702 request_id=77f5204b
+2026-10-07 21:44:46 INFO inventory: stock check ok sku=8656 request_id=4f68fb47
+2026-10-07 21:44:47 INFO inventory: stock check ok sku=9164 request_id=7a1451c0
+2026-10-07 21:44:48 INFO inventory: stock check ok sku=8280 request_id=639e50ba
+2026-10-07 21:44:49 INFO inventory: stock check ok sku=8563 request_id=b760986d
+2026-10-07 21:44:50 INFO inventory: stock check ok sku=3197 request_id=4b5b451c
+2026-10-07 21:44:51 INFO inventory: stock check ok sku=6746 request_id=6d6b9668
+2026-10-07 21:44:52 INFO inventory: stock check ok sku=6126 request_id=527d0508
+2026-10-07 21:44:53 INFO inventory: stock check ok sku=2636 request_id=5998b24c
+2026-10-07 21:44:54 INFO inventory: stock check ok sku=2274 request_id=7d161790
+2026-10-07 21:44:55 INFO inventory: stock check ok sku=7688 request_id=6e8064e9
+2026-10-07 21:44:56 INFO inventory: stock check ok sku=3164 request_id=f90d9a1b
+2026-10-07 21:44:57 INFO inventory: stock check ok sku=5963 request_id=2b150535
+2026-10-07 21:44:58 INFO inventory: stock check ok sku=4680 request_id=ea7df2d3
+2026-10-07 21:44:59 INFO inventory: stock check ok sku=1451 request_id=63de297d
+2026-10-07 21:45:00 INFO inventory: stock check ok sku=3037 request_id=0e18f14d
+2026-10-07 21:45:01 INFO inventory: stock check ok sku=2361 request_id=f6321548
+2026-10-07 21:45:02 INFO inventory: stock check ok sku=8435 request_id=3060583f
+2026-10-07 21:45:03 INFO inventory: stock check ok sku=1893 request_id=98c8b823
+2026-10-07 21:45:05 INFO inventory: stock check ok sku=4999 request_id=62286aa4
+2026-10-07 21:45:06 INFO inventory: stock check ok sku=3831 request_id=e3266d53
+2026-10-07 21:45:07 INFO inventory: stock check ok sku=5013 request_id=e5483717
+2026-10-07 21:45:08 INFO inventory: stock check ok sku=1417 request_id=3c761816
+2026-10-07 21:45:09 INFO inventory: stock check ok sku=4262 request_id=d5066e50
+2026-10-07 21:45:10 INFO inventory: stock check ok sku=3563 request_id=84ec1e68
+2026-10-07 21:45:11 INFO inventory: stock check ok sku=7998 request_id=7ee30ea7
+2026-10-07 21:45:12 INFO inventory: stock check ok sku=2544 request_id=da590703
+2026-10-07 21:45:13 INFO inventory: stock check ok sku=9855 request_id=faab07f3
+2026-10-07 21:45:14 INFO inventory: stock check ok sku=6997 request_id=dc57756f
+2026-10-07 21:45:15 INFO inventory: stock check ok sku=3057 request_id=e30af436
+2026-10-07 21:45:16 INFO inventory: stock check ok sku=1461 request_id=c8b31003
+2026-10-07 21:45:17 INFO inventory: stock check ok sku=5469 request_id=9469b297
+2026-10-07 21:45:18 INFO inventory: stock check ok sku=7966 request_id=fb620151
+2026-10-07 21:45:19 INFO inventory: stock check ok sku=5952 request_id=83f9d880
+2026-10-07 21:45:20 INFO inventory: stock check ok sku=7014 request_id=a76e345b
+2026-10-07 21:45:21 INFO inventory: stock check ok sku=7651 request_id=c70c0456
+2026-10-07 21:45:22 INFO inventory: stock check ok sku=1545 request_id=1804dc9d
+2026-10-07 21:45:23 INFO inventory: stock check ok sku=9188 request_id=24cec6cb
+2026-10-07 21:45:24 INFO inventory: stock check ok sku=3895 request_id=7c66e583
+2026-10-07 21:45:25 INFO inventory: stock check ok sku=7517 request_id=d482e18a
+2026-10-07 21:45:26 INFO inventory: stock check ok sku=1981 request_id=c96011f7
+2026-10-07 21:45:27 INFO inventory: stock check ok sku=7614 request_id=002888e1
+2026-10-07 21:45:28 INFO inventory: stock check ok sku=8856 request_id=f8091703
+2026-10-07 21:45:29 INFO inventory: stock check ok sku=8163 request_id=6a0ae22d
+2026-10-07 21:45:30 INFO inventory: stock check ok sku=9645 request_id=04aee374
+2026-10-07 21:45:31 INFO inventory: stock check ok sku=6425 request_id=1d2d84ba
+2026-10-07 21:45:31 INFO inventory: fault armed type=resource_exhaustion duration_s=12
+2026-10-07 21:45:32 WARNING inventory: high memory usage detected: 99% of limit
+2026-10-07 21:45:33 ERROR inventory: stock check failed for item request_id=c955a217
+2026-10-07 21:45:34 WARNING inventory: high memory usage detected: 91% of limit
+2026-10-07 21:45:35 ERROR inventory: stock check failed for item request_id=2b281a65
+2026-10-07 21:45:36 WARNING inventory: high memory usage detected: 96% of limit
+2026-10-07 21:45:37 ERROR inventory: stock check failed for item request_id=8c55d556
+2026-10-07 21:45:38 WARNING inventory: high memory usage detected: 98% of limit
+2026-10-07 21:45:39 ERROR inventory: stock check failed for item request_id=2333a788
+2026-10-07 21:45:40 WARNING inventory: high memory usage detected: 98% of limit
+2026-10-07 21:45:41 INFO inventory: stock check ok sku=1057 request_id=72a85c1c
+2026-10-07 21:45:42 WARNING inventory: high memory usage detected: 90% of limit
+2026-10-07 21:45:42 ERROR inventory: stock check failed for item request_id=948cc688
+2026-10-07 21:45:44 INFO inventory: stock check ok sku=5553 request_id=9098f88f
+2026-10-07 21:45:45 INFO inventory: stock check ok sku=6590 request_id=43fcad14
+2026-10-07 21:45:46 INFO inventory: stock check ok sku=7876 request_id=77d3aa49
+2026-10-07 21:45:47 INFO inventory: stock check ok sku=3456 request_id=f126f530
+2026-10-07 21:45:48 INFO inventory: stock check ok sku=6566 request_id=877a62ab
+2026-10-07 21:45:49 INFO inventory: stock check ok sku=7978 request_id=9b998f88
+2026-10-07 21:45:50 INFO inventory: stock check ok sku=6775 request_id=ece44dcf
+2026-10-07 21:45:51 INFO inventory: stock check ok sku=6477 request_id=fc452580
+2026-10-07 21:45:52 INFO inventory: stock check ok sku=2942 request_id=d5d661fb
+2026-10-07 21:45:53 INFO inventory: stock check ok sku=1571 request_id=3d9603a5
+2026-10-07 21:45:54 INFO inventory: stock check ok sku=8913 request_id=b53d604f
+2026-10-07 21:45:55 INFO inventory: stock check ok sku=6684 request_id=be926fce
+2026-10-07 21:45:56 INFO inventory: stock check ok sku=2465 request_id=6f12f98d
+2026-10-07 21:45:57 INFO inventory: stock check ok sku=1385 request_id=8743d060
+2026-10-07 21:45:58 INFO inventory: stock check ok sku=1762 request_id=0a65198c
+2026-10-07 21:45:59 INFO inventory: stock check ok sku=2689 request_id=21946b66
+2026-10-07 21:46:00 INFO inventory: stock check ok sku=7133 request_id=fde16a73
+2026-10-07 21:46:01 INFO inventory: stock check ok sku=3279 request_id=dbf7d020
+2026-10-07 21:46:02 INFO inventory: stock check ok sku=7563 request_id=51096c63
+2026-10-07 21:46:03 INFO inventory: stock check ok sku=1662 request_id=fb715bde
+2026-10-07 21:46:04 INFO inventory: stock check ok sku=6682 request_id=d63b13f1
+2026-10-07 21:46:05 INFO inventory: stock check ok sku=7028 request_id=d78bef87
+2026-10-07 21:46:06 INFO inventory: stock check ok sku=4435 request_id=f6448a2b

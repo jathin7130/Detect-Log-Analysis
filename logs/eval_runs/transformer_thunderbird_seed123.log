@@ -1,0 +1,1 @@
+[thunderbird] transformer seed=123: P=0.784 R=0.896 F1=0.836 PR-AUC=0.805 FA/10k=948.4 -> C:\Users\tejan\OneDrive\Desktop\drive\devops-log-analysis\results\thunderbird_transformer_seed123_eval.json

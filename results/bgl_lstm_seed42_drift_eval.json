@@ -1,0 +1,15 @@
+{
+  "dataset": "bgl",
+  "model": "lstm",
+  "seed": 42,
+  "topk": 3,
+  "threshold": 0.14736842105263157,
+  "n_clean_normal": 6348,
+  "n_drifted": 6348,
+  "n_too_short_clean": 0,
+  "n_too_short_drift": 0,
+  "false_positive_rate_clean": 0.004253308128544423,
+  "false_positive_rate_drifted": 0.05403276622558286,
+  "fpr_increase": 0.04977945809703844,
+  "fpr_increase_relative": 11.703703703703704
+}

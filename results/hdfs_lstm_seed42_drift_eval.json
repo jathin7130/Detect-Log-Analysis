@@ -1,0 +1,15 @@
+{
+  "dataset": "hdfs",
+  "model": "lstm",
+  "seed": 42,
+  "topk": 3,
+  "threshold": 0.08,
+  "n_clean_normal": 83734,
+  "n_drifted": 83734,
+  "n_too_short_clean": 0,
+  "n_too_short_drift": 0,
+  "false_positive_rate_clean": 0.026285618745073687,
+  "false_positive_rate_drifted": 0.9992237322951251,
+  "fpr_increase": 0.9729381135500513,
+  "fpr_increase_relative": 37.014084507042256
+}

@@ -1,0 +1,11 @@
+[bgl] seed=42 device=cuda mixed_precision=True window_size=5 smoke_test=False
+[bgl] train_windows=2,813,520 val_windows=602,870 vocab_size=1819
+[bgl] epoch 1/12 train_loss=0.3196 val_loss=0.1546 val_acc=0.9392 (80.1s elapsed)
+[bgl] epoch 2/12 train_loss=0.1519 val_loss=0.1483 val_acc=0.9405 (160.7s elapsed)
+[bgl] epoch 3/12 train_loss=0.1476 val_loss=0.1459 val_acc=0.9414 (240.7s elapsed)
+[bgl] epoch 4/12 train_loss=0.1455 val_loss=0.1459 val_acc=0.9419 (321.4s elapsed)
+[bgl] epoch 5/12 train_loss=0.1441 val_loss=0.1451 val_acc=0.9405 (402.4s elapsed)
+[bgl] epoch 6/12 train_loss=0.1432 val_loss=0.1448 val_acc=0.9420 (482.4s elapsed)
+[bgl] epoch 7/12 train_loss=0.1425 val_loss=0.1452 val_acc=0.9418 (562.9s elapsed)
+[bgl] early stopping at epoch 7 (no val_loss improvement for 2 epochs)
+[bgl] done. best_val_loss=0.1451 -> C:\Users\tejan\OneDrive\Desktop\drive\devops-log-analysis\models\bgl_transformer_seed42.pt, C:\Users\tejan\OneDrive\Desktop\drive\devops-log-analysis\results\bgl_transformer_seed42_history.json

@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Raw/intermediate data and trained checkpoints are large (11GB+ combined)
+# and aren't needed to run the deployed website -- only to reproduce the
+# experiments, which README.md covers (re-download + re-run the scripts).
+data/raw/
+data/masked/
+data/sequences/
+data/features/
+data/cross_domain/
+data/drift/
+data/splits/
+models/

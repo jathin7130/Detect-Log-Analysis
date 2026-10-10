@@ -1,0 +1,13 @@
+{
+  "dataset": "thunderbird",
+  "model_a": "lstm",
+  "model_b": "transformer",
+  "f1_a": 0.8361474435196196,
+  "f1_b": 0.8091292793496951,
+  "n_bootstrap": 2000,
+  "mean_diff": 0.026895832279946307,
+  "ci95_low": 0.022987101904984056,
+  "ci95_high": 0.0310841720664746,
+  "p_value": 0.0,
+  "significant_at_0.05": true
+}

@@ -1,0 +1,1 @@
+[hdfs] transformer seed=42: P=0.263 R=0.295 F1=0.278 PR-AUC=0.156 FA/10k=242.2 -> C:\Users\tejan\OneDrive\Desktop\drive\devops-log-analysis\results\hdfs_transformer_seed42_eval.json

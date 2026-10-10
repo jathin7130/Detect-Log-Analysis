@@ -1,0 +1,22 @@
+{
+  "threshold": 0.07692307692307693,
+  "tp": 746,
+  "fp": 2089,
+  "fn": 1781,
+  "tn": 81645,
+  "precision": 0.26313932980599647,
+  "recall": 0.29521171349426195,
+  "f1": 0.278254382693025,
+  "pr_auc": 0.15590527543864513,
+  "false_positive_rate": 0.024948049776673753,
+  "false_alarms_per_10k_events": 242.17201284473865,
+  "n_total": 86261,
+  "dataset": "hdfs",
+  "model": "transformer",
+  "seed": 42,
+  "topk": 3,
+  "window_size": 5,
+  "vocab_size": 44,
+  "n_too_short_val": 932,
+  "n_too_short_test": 932
+}

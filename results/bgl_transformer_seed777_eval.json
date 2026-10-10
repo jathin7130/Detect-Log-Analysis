@@ -1,0 +1,22 @@
+{
+  "threshold": 0.12631578947368421,
+  "tp": 661,
+  "fp": 43,
+  "fn": 64,
+  "tn": 6305,
+  "precision": 0.9389204545454546,
+  "recall": 0.9117241379310345,
+  "f1": 0.9251224632610217,
+  "pr_auc": 0.9710272987711781,
+  "false_positive_rate": 0.006773787019533711,
+  "false_alarms_per_10k_events": 60.7945709034356,
+  "n_total": 7073,
+  "dataset": "bgl",
+  "model": "transformer",
+  "seed": 777,
+  "topk": 3,
+  "window_size": 5,
+  "vocab_size": 1819,
+  "n_too_short_val": 0,
+  "n_too_short_test": 0
+}

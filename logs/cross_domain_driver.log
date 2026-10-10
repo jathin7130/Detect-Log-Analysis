@@ -1,0 +1,13 @@
+=== building hdfs_to_bgl Wed Oct  7 21:06:08 GMTDT 2026 ===
+=== done hdfs_to_bgl exit=0 Wed Oct  7 21:09:15 GMTDT 2026 ===
+=== building hdfs_to_thunderbird Wed Oct  7 21:09:15 GMTDT 2026 ===
+=== done hdfs_to_thunderbird exit=0 Wed Oct  7 21:13:35 GMTDT 2026 ===
+=== building bgl_to_hdfs Wed Oct  7 21:13:35 GMTDT 2026 ===
+=== done bgl_to_hdfs exit=0 Wed Oct  7 21:35:12 GMTDT 2026 ===
+=== building bgl_to_thunderbird Wed Oct  7 21:35:12 GMTDT 2026 ===
+=== done bgl_to_thunderbird exit=0 Wed Oct  7 22:02:02 GMTDT 2026 ===
+=== building thunderbird_to_hdfs Wed Oct  7 22:02:02 GMTDT 2026 ===
+=== done thunderbird_to_hdfs exit=0 Wed Oct  7 22:19:00 GMTDT 2026 ===
+=== building thunderbird_to_bgl Wed Oct  7 22:19:00 GMTDT 2026 ===
+=== done thunderbird_to_bgl exit=0 Wed Oct  7 22:26:18 GMTDT 2026 ===
+ALL CROSS-DOMAIN BUILDS DONE

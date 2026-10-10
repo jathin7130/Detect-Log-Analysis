@@ -1,0 +1,18 @@
+{
+  "threshold": 0.6444137502538176,
+  "tp": 2524,
+  "fp": 3,
+  "fn": 3,
+  "tn": 83731,
+  "precision": 0.998812821527503,
+  "recall": 0.998812821527503,
+  "f1": 0.998812821527503,
+  "pr_auc": 0.999956362064696,
+  "false_positive_rate": 3.582774022499821e-05,
+  "false_alarms_per_10k_events": 0.34778173218488073,
+  "n_total": 86261,
+  "train_time_sec": 13.285602331161499,
+  "dataset": "hdfs",
+  "model": "random_forest",
+  "features": "tfidf"
+}

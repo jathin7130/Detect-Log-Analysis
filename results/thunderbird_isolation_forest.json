@@ -1,0 +1,19 @@
+{
+  "threshold": 0.30109416601914624,
+  "tp": 5673,
+  "fp": 8617,
+  "fn": 71,
+  "tn": 612,
+  "precision": 0.39699090272918125,
+  "recall": 0.9876392757660167,
+  "f1": 0.5663372267145852,
+  "pr_auc": 0.28766614591990053,
+  "false_positive_rate": 0.9336872900639289,
+  "false_alarms_per_10k_events": 5755.025712949977,
+  "n_total": 14973,
+  "train_time_sec": 1.5082426071166992,
+  "dataset": "thunderbird",
+  "model": "isolation_forest",
+  "features": "tfidf",
+  "contamination": 0.3835826236312889
+}

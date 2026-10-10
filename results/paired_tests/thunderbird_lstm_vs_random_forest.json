@@ -1,0 +1,13 @@
+{
+  "dataset": "thunderbird",
+  "model_a": "lstm",
+  "model_b": "random_forest",
+  "f1_a": 0.8361474435196196,
+  "f1_b": 0.9993032572722522,
+  "n_bootstrap": 2000,
+  "mean_diff": -0.16313457150612748,
+  "ci95_low": -0.16995199213309986,
+  "ci95_high": -0.15617212989973098,
+  "p_value": 0.0,
+  "significant_at_0.05": true
+}

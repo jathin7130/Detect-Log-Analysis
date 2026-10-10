@@ -1,0 +1,13 @@
+{
+  "dataset": "bgl",
+  "model_a": "lstm",
+  "model_b": "transformer",
+  "f1_a": 0.9318181818181819,
+  "f1_b": 0.9274136715997181,
+  "n_bootstrap": 2000,
+  "mean_diff": 0.004434333880233761,
+  "ci95_low": -0.0004184334609275364,
+  "ci95_high": 0.009237449309293702,
+  "p_value": 0.073,
+  "significant_at_0.05": false
+}

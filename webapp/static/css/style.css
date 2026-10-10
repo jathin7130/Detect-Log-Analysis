@@ -1,0 +1,514 @@
+:root {
+  /* light "paper" surface -- not pure white, not the cliché warm cream */
+  --page: #f5f5f3;
+  --panel: #ffffff;
+  --panel-hover: #fbfbf9;
+  --line: #e2e2de;
+  --text: #34353a;
+  --text-dim: #74767b;
+  --text-bright: #14151a;
+
+  /* functional colors, tuned for contrast on the light surface */
+  --signal: #0f766e;
+  --green: #15803d;
+  --amber: #a15c07;
+  --red: #c0352b;
+  --info: #35618a;
+  --service: #6d4fb0;
+
+  /* a deliberate second register: log/evidence content stays a genuine
+     dark terminal window set into the light page, not recolored to match
+     -- it reads as "looking at the machine" and gives the page visual
+     rhythm instead of flat light-on-light throughout */
+  --inset-bg: #14151a;
+  --inset-line: #2a2b30;
+  --inset-text: #c8c9cc;
+  --inset-text-dim: #84868b;
+  --inset-signal: #5eead4;
+  --inset-green: #4ade80;
+  --inset-amber: #e0a94d;
+  --inset-red: #f2746b;
+  --inset-info: #7c9cbf;
+  --inset-service: #b79aed;
+
+  --mono: "IBM Plex Mono", "SF Mono", Consolas, monospace;
+  --sans: "IBM Plex Sans", -apple-system, "Segoe UI", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  counter-reset: section;
+  margin: 0;
+  background: var(--page);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+
+/* data, labels, code, numbers, log lines stay monospace -- a deliberate
+   choice fitting the subject (reading logs/metrics), not a default applied
+   to everything including prose */
+.mono-num, .bar-label, .bar-fill, table, .badge, .log-console,
+.evidence-item, code, .phase-num, input, select, textarea,
+.brand, .stat-card .value, .phase-stat .n {
+  font-family: var(--mono);
+}
+
+a { color: var(--signal); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ---- top bar ---- */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: var(--panel);
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.topbar .brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-bright);
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .topbar { flex-wrap: wrap; gap: 8px 16px; }
+  .topbar .meta { order: 3; width: 100%; }
+}
+
+.topbar .brand .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--signal);
+  box-shadow: 0 0 6px var(--signal);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.topbar nav {
+  display: flex;
+  gap: 20px;
+  font-family: var(--mono);
+}
+
+.topbar nav a {
+  color: var(--text-dim);
+  font-size: 12.5px;
+  padding: 4px 2px;
+  border-bottom: 2px solid transparent;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.topbar nav a.active {
+  color: var(--text-bright);
+  border-bottom-color: var(--signal);
+}
+
+.topbar .meta {
+  color: var(--text-dim);
+  font-family: var(--mono);
+  font-size: 11px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* ---- layout ---- */
+.page {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 24px 20px 60px;
+}
+
+.section-title {
+  counter-increment: section;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin: 36px 0 14px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text-bright);
+}
+
+.section-title::before {
+  content: counter(section, decimal-leading-zero);
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--signal);
+}
+
+.section-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+  margin-left: 4px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.grid-wide {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 12px;
+}
+
+/* ---- panels / cards ---- */
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 16px;
+  box-shadow: 0 1px 2px rgba(20,21,26,0.03);
+}
+
+.panel:hover { background: var(--panel-hover); }
+
+.stat-card .label {
+  color: var(--text-dim);
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.3px;
+  margin-bottom: 8px;
+}
+
+.stat-card .value {
+  color: var(--text-bright);
+  font-size: 27px;
+  font-weight: 500;
+}
+
+.stat-card .sub {
+  color: var(--text-dim);
+  font-size: 11.5px;
+  margin-top: 6px;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 14px;
+}
+
+.panel-header h3 {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-bright);
+  font-weight: 600;
+}
+
+.panel-header .hint {
+  color: var(--text-dim);
+  font-size: 11px;
+}
+
+/* ---- badges: rectangular status tags, not SaaS pills ---- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 1px 7px;
+  border-left: 2px solid currentColor;
+  background: rgba(20,21,26,0.045);
+  border-radius: 0;
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+.badge-ok   { color: var(--green); }
+.badge-warn { color: var(--amber); }
+.badge-bad  { color: var(--red); }
+.badge-info { color: var(--info); }
+.badge-mock { color: var(--text-dim); }
+
+/* ---- bar chart (pure CSS, no JS framework) ---- */
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+.bar-row .bar-label {
+  width: 150px;
+  color: var(--text-dim);
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.bar-row .bar-track {
+  flex: 1;
+  background: var(--page);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  height: 15px;
+  overflow: hidden;
+  position: relative;
+}
+
+.bar-row .bar-fill {
+  height: 100%;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 6px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+/* ---- table ---- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+th, td {
+  padding: 8px 10px;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+}
+
+th {
+  color: var(--text-dim);
+  font-size: 10.5px;
+  letter-spacing: 0.3px;
+  font-weight: 600;
+}
+
+tr:hover td { background: var(--panel-hover); }
+
+.mono-num { font-family: var(--mono); color: var(--text-bright); }
+
+/* ---- log lines (demo) -- deliberately a dark terminal inset, see :root comment ---- */
+.log-console {
+  background: var(--inset-bg);
+  border: 1px solid var(--inset-line);
+  border-radius: 3px;
+  padding: 12px 14px;
+  max-height: 320px;
+  overflow-y: auto;
+  font-size: 12px;
+  color: var(--inset-text);
+}
+
+.log-line {
+  padding: 2px 0;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.log-line .ts { color: var(--inset-text-dim); }
+.log-line .lvl-INFO { color: var(--inset-info); }
+.log-line .lvl-WARNING { color: var(--inset-amber); }
+.log-line .lvl-ERROR { color: var(--inset-red); }
+.log-line .svc { color: var(--inset-service); }
+
+/* ---- evidence / gate ---- */
+.evidence-item {
+  border-left: 2px solid var(--inset-signal);
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  background: var(--inset-bg);
+  color: var(--inset-text);
+  font-size: 12px;
+}
+
+.evidence-item .score { color: var(--inset-text-dim); float: right; font-family: var(--mono); }
+
+.gate-banner {
+  border-radius: 3px;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.gate-answer { background: rgba(21,128,61,0.07); border: 1px solid rgba(21,128,61,0.3); color: var(--green); }
+.gate-abstain { background: rgba(161,92,7,0.07); border: 1px solid rgba(161,92,7,0.3); color: var(--amber); }
+
+.footer-note {
+  color: var(--text-dim);
+  font-size: 11px;
+  margin-top: 40px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+/* ---- phases page ---- */
+.phase-jumpnav {
+  position: sticky;
+  top: 45px;
+  z-index: 9;
+  background: var(--page);
+  padding: 10px 0 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 20px;
+}
+
+.phase-jumpnav a {
+  color: var(--text-dim);
+  font-family: var(--mono);
+  font-size: 11px;
+  padding: 4px 9px;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  white-space: nowrap;
+  background: var(--panel);
+}
+
+.phase-jumpnav a:hover {
+  color: var(--text-bright);
+  border-color: var(--signal);
+  text-decoration: none;
+}
+
+.phase-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--signal);
+  border-radius: 3px;
+  padding: 22px 24px;
+  margin-bottom: 18px;
+  scroll-margin-top: 110px;
+  box-shadow: 0 1px 2px rgba(20,21,26,0.03);
+}
+
+.phase-card.phase-core { border-left-color: var(--green); }
+.phase-card.phase-infra { border-left-color: var(--service); }
+.phase-card.phase-product { border-left-color: var(--amber); }
+
+.phase-head {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+}
+
+.phase-num {
+  font-size: 11px;
+  color: var(--text-dim);
+  letter-spacing: 0.5px;
+}
+
+.phase-head h2 {
+  margin: 0;
+  font-size: 18px;
+  color: var(--text-bright);
+  font-weight: 600;
+}
+
+/* the tagline reads as a lede, not a caption -- bigger and set in the
+   body color so each phase opens with one confident sentence rather than
+   a muted italic footnote */
+.phase-tagline {
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 18px;
+  max-width: 62ch;
+}
+
+.phase-section {
+  margin-top: 16px;
+  max-width: 68ch;
+}
+
+.phase-section h4 {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.5px;
+  color: var(--signal);
+  margin: 0 0 6px;
+  font-weight: 500;
+}
+
+.phase-section p, .phase-section li {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+.phase-section p + p { margin-top: 12px; }
+
+.phase-section ul {
+  margin: 4px 0;
+  padding-left: 18px;
+}
+
+/* findings read as a margin annotation -- a tinted note, not another
+   plain box -- so a page with many of these doesn't flatten into a row
+   of identical panels */
+.phase-findings {
+  background: rgba(15,118,110,0.05);
+  border-left: 2px solid var(--signal);
+  border-radius: 0 3px 3px 0;
+  padding: 10px 14px;
+  margin-top: 10px;
+  font-size: 12.5px;
+  line-height: 1.65;
+  max-width: 68ch;
+}
+
+.phase-findings li { margin-bottom: 4px; }
+
+.phase-stats-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.phase-stat {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 8px 14px;
+  min-width: 110px;
+}
+
+.phase-stat .n { font-size: 18px; font-weight: 600; color: var(--text-bright); }
+.phase-stat .l { font-size: 10px; color: var(--text-dim); letter-spacing: 0.3px; }
+
+.toc-intro {
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  max-width: 62ch;
+}

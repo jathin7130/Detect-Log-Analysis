@@ -1,0 +1,22 @@
+{
+  "threshold": 0.17894736842105263,
+  "tp": 5090,
+  "fp": 1872,
+  "fn": 654,
+  "tn": 7357,
+  "precision": 0.7311117494972709,
+  "recall": 0.8861420612813371,
+  "f1": 0.8011962852195812,
+  "pr_auc": 0.7380077773295464,
+  "false_positive_rate": 0.20283887745151155,
+  "false_alarms_per_10k_events": 1250.2504508114607,
+  "n_total": 14973,
+  "dataset": "thunderbird",
+  "model": "transformer",
+  "seed": 777,
+  "topk": 3,
+  "window_size": 5,
+  "vocab_size": 1467,
+  "n_too_short_val": 0,
+  "n_too_short_test": 0
+}

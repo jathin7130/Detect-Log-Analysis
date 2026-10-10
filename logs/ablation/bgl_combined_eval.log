@@ -1,0 +1,1 @@
+[bgl] lstm_combined seed=42: P=0.945 R=0.909 F1=0.927 PR-AUC=0.970 FA/10k=53.7 -> C:\Users\tejan\OneDrive\Desktop\drive\devops-log-analysis\results\bgl_lstm_combined_seed42_eval.json

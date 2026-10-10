@@ -1,0 +1,57 @@
+services:
+  inventory:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        SERVICE: inventory
+    container_name: testbed-inventory
+    ports:
+      - "8103:5000"
+    volumes:
+      - ./logs:/var/log/testbed
+    restart: unless-stopped
+
+  payments:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        SERVICE: payments
+    container_name: testbed-payments
+    ports:
+      - "8104:5000"
+    volumes:
+      - ./logs:/var/log/testbed
+    restart: unless-stopped
+
+  orders:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        SERVICE: orders
+    container_name: testbed-orders
+    ports:
+      - "8102:5000"
+    volumes:
+      - ./logs:/var/log/testbed
+    depends_on:
+      - inventory
+      - payments
+    restart: unless-stopped
+
+  gateway:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        SERVICE: gateway
+    container_name: testbed-gateway
+    ports:
+      - "8101:5000"
+    volumes:
+      - ./logs:/var/log/testbed
+    depends_on:
+      - orders
+    restart: unless-stopped

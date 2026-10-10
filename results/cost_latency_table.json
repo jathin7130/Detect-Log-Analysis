@@ -1,0 +1,66 @@
+{
+  "training": {
+    "hdfs": {
+      "isolation_forest": {
+        "train_time_sec": 4.71543025970459,
+        "f1": 0.6824602707474985
+      },
+      "random_forest": {
+        "train_time_sec": 13.285602331161499,
+        "f1": 0.998812821527503
+      },
+      "lstm": {
+        "train_time_sec_mean": 955.3333333333333,
+        "f1_mean": 0.2650229210944519
+      },
+      "transformer": {
+        "train_time_sec_mean": 1299.6,
+        "f1_mean": 0.2708566364782015
+      }
+    },
+    "bgl": {
+      "isolation_forest": {
+        "train_time_sec": 0.7437927722930908,
+        "f1": 0.3251681075888568
+      },
+      "random_forest": {
+        "train_time_sec": 1.1323282718658447,
+        "f1": 0.981994459833795
+      },
+      "lstm": {
+        "train_time_sec_mean": 773.6333333333333,
+        "f1_mean": 0.9284423620648261
+      },
+      "transformer": {
+        "train_time_sec_mean": 591.6666666666666,
+        "f1_mean": 0.9258924592661976
+      }
+    },
+    "thunderbird": {
+      "isolation_forest": {
+        "train_time_sec": 1.5082426071166992,
+        "f1": 0.5663372267145852
+      },
+      "random_forest": {
+        "train_time_sec": 6.254333972930908,
+        "f1": 0.9993032572722522
+      },
+      "lstm": {
+        "train_time_sec_mean": 1383.0,
+        "f1_mean": 0.8227812988629665
+      },
+      "transformer": {
+        "train_time_sec_mean": 1484.3,
+        "f1_mean": 0.8154646005916001
+      }
+    }
+  },
+  "rca_latency": {
+    "overall_mean_s": 4.096009206771851,
+    "n_cases": 20,
+    "testbed_mean_s": 4.153872966766357,
+    "hdfs_mean_s": 3.934829592704773,
+    "bgl_mean_s": 4.07570493221283,
+    "thunderbird_mean_s": 4.1617655754089355
+  }
+}

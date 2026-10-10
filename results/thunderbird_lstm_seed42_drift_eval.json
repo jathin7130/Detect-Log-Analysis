@@ -1,0 +1,15 @@
+{
+  "dataset": "thunderbird",
+  "model": "lstm",
+  "seed": 42,
+  "topk": 3,
+  "threshold": 0.18947368421052632,
+  "n_clean_normal": 9229,
+  "n_drifted": 9229,
+  "n_too_short_clean": 0,
+  "n_too_short_drift": 0,
+  "false_positive_rate_clean": 0.17304149962076065,
+  "false_positive_rate_drifted": 0.6596597681222234,
+  "fpr_increase": 0.4866182685014627,
+  "fpr_increase_relative": 2.8121477770820285
+}

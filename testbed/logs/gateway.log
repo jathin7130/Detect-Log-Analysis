@@ -1,0 +1,494 @@
+2026-10-07 21:41:20 INFO gateway: service started, version=1.0
+2026-10-07 21:41:26 INFO gateway: received checkout request request_id=21a52037 client_ip=10.0.151.200
+2026-10-07 21:41:26 INFO gateway: checkout completed successfully request_id=21a52037
+2026-10-07 21:41:27 INFO gateway: received checkout request request_id=cedc74a2 client_ip=10.0.52.25
+2026-10-07 21:41:27 INFO gateway: checkout completed successfully request_id=cedc74a2
+2026-10-07 21:41:28 INFO gateway: received checkout request request_id=5ab1b694 client_ip=10.0.236.199
+2026-10-07 21:41:29 INFO gateway: checkout completed successfully request_id=5ab1b694
+2026-10-07 21:41:30 INFO gateway: received checkout request request_id=7bcda1b5 client_ip=10.0.60.35
+2026-10-07 21:41:30 INFO gateway: checkout completed successfully request_id=7bcda1b5
+2026-10-07 21:41:31 INFO gateway: received checkout request request_id=57bf2806 client_ip=10.0.96.61
+2026-10-07 21:41:31 INFO gateway: checkout completed successfully request_id=57bf2806
+2026-10-07 21:41:32 INFO gateway: received checkout request request_id=87b7a74a client_ip=10.0.215.54
+2026-10-07 21:41:32 INFO gateway: checkout completed successfully request_id=87b7a74a
+2026-10-07 21:41:33 INFO gateway: received checkout request request_id=4bd283a6 client_ip=10.0.136.208
+2026-10-07 21:41:33 INFO gateway: checkout completed successfully request_id=4bd283a6
+2026-10-07 21:41:34 INFO gateway: received checkout request request_id=26229311 client_ip=10.0.87.13
+2026-10-07 21:41:34 INFO gateway: checkout completed successfully request_id=26229311
+2026-10-07 21:41:35 INFO gateway: received checkout request request_id=3df163a0 client_ip=10.0.80.128
+2026-10-07 21:41:35 INFO gateway: checkout completed successfully request_id=3df163a0
+2026-10-07 21:41:36 INFO gateway: received checkout request request_id=395bbb59 client_ip=10.0.214.155
+2026-10-07 21:41:36 INFO gateway: checkout completed successfully request_id=395bbb59
+2026-10-07 21:41:37 INFO gateway: received checkout request request_id=4b755231 client_ip=10.0.13.132
+2026-10-07 21:41:37 INFO gateway: checkout completed successfully request_id=4b755231
+2026-10-07 21:41:38 INFO gateway: received checkout request request_id=65563d36 client_ip=10.0.147.204
+2026-10-07 21:41:38 INFO gateway: checkout completed successfully request_id=65563d36
+2026-10-07 21:41:39 INFO gateway: received checkout request request_id=dc94b79c client_ip=10.0.58.140
+2026-10-07 21:41:39 INFO gateway: checkout completed successfully request_id=dc94b79c
+2026-10-07 21:41:40 INFO gateway: received checkout request request_id=0caaed08 client_ip=10.0.37.104
+2026-10-07 21:41:40 INFO gateway: checkout completed successfully request_id=0caaed08
+2026-10-07 21:41:41 INFO gateway: received checkout request request_id=7d9bed9b client_ip=10.0.119.131
+2026-10-07 21:41:41 INFO gateway: checkout completed successfully request_id=7d9bed9b
+2026-10-07 21:41:42 INFO gateway: received checkout request request_id=e7ff3309 client_ip=10.0.178.45
+2026-10-07 21:41:42 INFO gateway: checkout completed successfully request_id=e7ff3309
+2026-10-07 21:41:43 INFO gateway: received checkout request request_id=20811fc6 client_ip=10.0.2.133
+2026-10-07 21:41:43 INFO gateway: checkout completed successfully request_id=20811fc6
+2026-10-07 21:41:44 INFO gateway: received checkout request request_id=2111e1f6 client_ip=10.0.27.95
+2026-10-07 21:41:44 INFO gateway: checkout completed successfully request_id=2111e1f6
+2026-10-07 21:41:45 INFO gateway: received checkout request request_id=f26a90cb client_ip=10.0.175.82
+2026-10-07 21:41:45 INFO gateway: checkout completed successfully request_id=f26a90cb
+2026-10-07 21:41:46 INFO gateway: received checkout request request_id=db3b7018 client_ip=10.0.237.111
+2026-10-07 21:41:46 INFO gateway: checkout completed successfully request_id=db3b7018
+2026-10-07 21:41:47 INFO gateway: received checkout request request_id=df729cd3 client_ip=10.0.165.98
+2026-10-07 21:41:47 ERROR gateway: orders service returned 502 request_id=df729cd3
+2026-10-07 21:41:48 INFO gateway: received checkout request request_id=b6f7f733 client_ip=10.0.84.108
+2026-10-07 21:41:48 ERROR gateway: orders service returned 502 request_id=b6f7f733
+2026-10-07 21:41:49 INFO gateway: received checkout request request_id=f50340c5 client_ip=10.0.57.105
+2026-10-07 21:41:49 ERROR gateway: orders service returned 502 request_id=f50340c5
+2026-10-07 21:41:50 INFO gateway: received checkout request request_id=b0710731 client_ip=10.0.148.20
+2026-10-07 21:41:50 ERROR gateway: orders service returned 502 request_id=b0710731
+2026-10-07 21:41:51 INFO gateway: received checkout request request_id=db1a17f2 client_ip=10.0.171.97
+2026-10-07 21:41:51 ERROR gateway: orders service returned 502 request_id=db1a17f2
+2026-10-07 21:41:52 INFO gateway: received checkout request request_id=75d35576 client_ip=10.0.153.133
+2026-10-07 21:41:52 ERROR gateway: orders service returned 502 request_id=75d35576
+2026-10-07 21:41:53 INFO gateway: received checkout request request_id=6c45fe23 client_ip=10.0.188.150
+2026-10-07 21:41:53 ERROR gateway: orders service returned 502 request_id=6c45fe23
+2026-10-07 21:41:54 INFO gateway: received checkout request request_id=f244aef7 client_ip=10.0.82.246
+2026-10-07 21:41:54 ERROR gateway: orders service returned 502 request_id=f244aef7
+2026-10-07 21:41:55 INFO gateway: received checkout request request_id=69d4dcc5 client_ip=10.0.50.241
+2026-10-07 21:41:55 INFO gateway: checkout completed successfully request_id=69d4dcc5
+2026-10-07 21:41:56 INFO gateway: received checkout request request_id=05e63cf9 client_ip=10.0.78.201
+2026-10-07 21:41:56 INFO gateway: checkout completed successfully request_id=05e63cf9
+2026-10-07 21:41:57 INFO gateway: received checkout request request_id=437e5dda client_ip=10.0.72.208
+2026-10-07 21:41:57 INFO gateway: checkout completed successfully request_id=437e5dda
+2026-10-07 21:41:58 INFO gateway: received checkout request request_id=e85040f6 client_ip=10.0.48.131
+2026-10-07 21:41:58 INFO gateway: checkout completed successfully request_id=e85040f6
+2026-10-07 21:41:59 INFO gateway: received checkout request request_id=22508182 client_ip=10.0.186.35
+2026-10-07 21:41:59 INFO gateway: checkout completed successfully request_id=22508182
+2026-10-07 21:42:00 INFO gateway: received checkout request request_id=e6a8307e client_ip=10.0.211.132
+2026-10-07 21:42:00 INFO gateway: checkout completed successfully request_id=e6a8307e
+2026-10-07 21:42:01 INFO gateway: received checkout request request_id=a91e769a client_ip=10.0.204.127
+2026-10-07 21:42:02 INFO gateway: checkout completed successfully request_id=a91e769a
+2026-10-07 21:42:03 INFO gateway: received checkout request request_id=1df73d0d client_ip=10.0.41.81
+2026-10-07 21:42:03 INFO gateway: checkout completed successfully request_id=1df73d0d
+2026-10-07 21:42:04 INFO gateway: received checkout request request_id=36d0fdaf client_ip=10.0.32.108
+2026-10-07 21:42:04 INFO gateway: checkout completed successfully request_id=36d0fdaf
+2026-10-07 21:42:05 INFO gateway: received checkout request request_id=4d0c5809 client_ip=10.0.87.212
+2026-10-07 21:42:05 INFO gateway: checkout completed successfully request_id=4d0c5809
+2026-10-07 21:42:06 INFO gateway: received checkout request request_id=2837524b client_ip=10.0.68.18
+2026-10-07 21:42:06 INFO gateway: checkout completed successfully request_id=2837524b
+2026-10-07 21:42:07 INFO gateway: received checkout request request_id=8d0beba9 client_ip=10.0.107.170
+2026-10-07 21:42:07 INFO gateway: checkout completed successfully request_id=8d0beba9
+2026-10-07 21:42:08 INFO gateway: received checkout request request_id=723f2ce9 client_ip=10.0.223.148
+2026-10-07 21:42:08 INFO gateway: checkout completed successfully request_id=723f2ce9
+2026-10-07 21:42:09 INFO gateway: received checkout request request_id=366a6a75 client_ip=10.0.228.57
+2026-10-07 21:42:09 INFO gateway: checkout completed successfully request_id=366a6a75
+2026-10-07 21:42:10 INFO gateway: received checkout request request_id=9d5b0f15 client_ip=10.0.93.158
+2026-10-07 21:42:10 INFO gateway: checkout completed successfully request_id=9d5b0f15
+2026-10-07 21:42:11 INFO gateway: received checkout request request_id=aec6c7b3 client_ip=10.0.107.95
+2026-10-07 21:42:11 INFO gateway: checkout completed successfully request_id=aec6c7b3
+2026-10-07 21:42:12 INFO gateway: received checkout request request_id=87b4d579 client_ip=10.0.216.36
+2026-10-07 21:42:12 INFO gateway: checkout completed successfully request_id=87b4d579
+2026-10-07 21:42:13 INFO gateway: received checkout request request_id=8bdd6acd client_ip=10.0.20.93
+2026-10-07 21:42:13 INFO gateway: checkout completed successfully request_id=8bdd6acd
+2026-10-07 21:42:14 INFO gateway: received checkout request request_id=0f478808 client_ip=10.0.119.246
+2026-10-07 21:42:14 INFO gateway: checkout completed successfully request_id=0f478808
+2026-10-07 21:42:15 INFO gateway: received checkout request request_id=f8eab4cf client_ip=10.0.104.149
+2026-10-07 21:42:15 INFO gateway: checkout completed successfully request_id=f8eab4cf
+2026-10-07 21:42:16 INFO gateway: received checkout request request_id=9f624dca client_ip=10.0.42.60
+2026-10-07 21:42:16 INFO gateway: checkout completed successfully request_id=9f624dca
+2026-10-07 21:42:17 INFO gateway: received checkout request request_id=1a15ed9b client_ip=10.0.136.122
+2026-10-07 21:42:19 ERROR gateway: orders service returned 503 request_id=1a15ed9b
+2026-10-07 21:42:20 INFO gateway: received checkout request request_id=43e0a986 client_ip=10.0.210.227
+2026-10-07 21:42:23 ERROR gateway: orders service returned 503 request_id=43e0a986
+2026-10-07 21:42:24 INFO gateway: received checkout request request_id=e6e1f53a client_ip=10.0.173.21
+2026-10-07 21:42:27 ERROR gateway: orders service returned 503 request_id=e6e1f53a
+2026-10-07 21:42:28 INFO gateway: received checkout request request_id=517f5db5 client_ip=10.0.234.79
+2026-10-07 21:42:28 INFO gateway: checkout completed successfully request_id=517f5db5
+2026-10-07 21:42:29 INFO gateway: received checkout request request_id=d172b88e client_ip=10.0.148.43
+2026-10-07 21:42:29 INFO gateway: checkout completed successfully request_id=d172b88e
+2026-10-07 21:42:30 INFO gateway: received checkout request request_id=2e8b1206 client_ip=10.0.99.51
+2026-10-07 21:42:30 INFO gateway: checkout completed successfully request_id=2e8b1206
+2026-10-07 21:42:31 INFO gateway: received checkout request request_id=a736822e client_ip=10.0.232.55
+2026-10-07 21:42:31 INFO gateway: checkout completed successfully request_id=a736822e
+2026-10-07 21:42:33 INFO gateway: received checkout request request_id=ae0cedef client_ip=10.0.186.135
+2026-10-07 21:42:33 INFO gateway: checkout completed successfully request_id=ae0cedef
+2026-10-07 21:42:34 INFO gateway: received checkout request request_id=b886ed7b client_ip=10.0.148.114
+2026-10-07 21:42:34 INFO gateway: checkout completed successfully request_id=b886ed7b
+2026-10-07 21:42:35 INFO gateway: received checkout request request_id=a1c65ce1 client_ip=10.0.200.35
+2026-10-07 21:42:35 INFO gateway: checkout completed successfully request_id=a1c65ce1
+2026-10-07 21:42:36 INFO gateway: received checkout request request_id=67612681 client_ip=10.0.28.75
+2026-10-07 21:42:36 INFO gateway: checkout completed successfully request_id=67612681
+2026-10-07 21:42:37 INFO gateway: received checkout request request_id=47c71c92 client_ip=10.0.101.1
+2026-10-07 21:42:37 INFO gateway: checkout completed successfully request_id=47c71c92
+2026-10-07 21:42:38 INFO gateway: received checkout request request_id=c953d6ca client_ip=10.0.47.3
+2026-10-07 21:42:38 INFO gateway: checkout completed successfully request_id=c953d6ca
+2026-10-07 21:42:39 INFO gateway: received checkout request request_id=cd434c88 client_ip=10.0.241.217
+2026-10-07 21:42:39 INFO gateway: checkout completed successfully request_id=cd434c88
+2026-10-07 21:42:40 INFO gateway: received checkout request request_id=09df80d4 client_ip=10.0.48.97
+2026-10-07 21:42:40 INFO gateway: checkout completed successfully request_id=09df80d4
+2026-10-07 21:42:41 INFO gateway: received checkout request request_id=9c454c8e client_ip=10.0.152.154
+2026-10-07 21:42:41 INFO gateway: checkout completed successfully request_id=9c454c8e
+2026-10-07 21:42:42 INFO gateway: received checkout request request_id=74681bb1 client_ip=10.0.228.215
+2026-10-07 21:42:42 INFO gateway: checkout completed successfully request_id=74681bb1
+2026-10-07 21:42:43 INFO gateway: received checkout request request_id=37fc511b client_ip=10.0.6.214
+2026-10-07 21:42:43 INFO gateway: checkout completed successfully request_id=37fc511b
+2026-10-07 21:42:44 INFO gateway: received checkout request request_id=0f3b67d5 client_ip=10.0.176.137
+2026-10-07 21:42:44 INFO gateway: checkout completed successfully request_id=0f3b67d5
+2026-10-07 21:42:45 INFO gateway: received checkout request request_id=7f2018db client_ip=10.0.3.22
+2026-10-07 21:42:45 INFO gateway: checkout completed successfully request_id=7f2018db
+2026-10-07 21:42:46 INFO gateway: received checkout request request_id=6d136e48 client_ip=10.0.130.195
+2026-10-07 21:42:46 INFO gateway: checkout completed successfully request_id=6d136e48
+2026-10-07 21:42:47 INFO gateway: received checkout request request_id=edc4b3b0 client_ip=10.0.253.144
+2026-10-07 21:42:47 INFO gateway: checkout completed successfully request_id=edc4b3b0
+2026-10-07 21:42:48 INFO gateway: received checkout request request_id=af214c6a client_ip=10.0.58.20
+2026-10-07 21:42:48 INFO gateway: checkout completed successfully request_id=af214c6a
+2026-10-07 21:42:49 INFO gateway: received checkout request request_id=99864255 client_ip=10.0.42.22
+2026-10-07 21:42:49 INFO gateway: checkout completed successfully request_id=99864255
+2026-10-07 21:42:50 INFO gateway: received checkout request request_id=f062382d client_ip=10.0.76.13
+2026-10-07 21:42:50 INFO gateway: checkout completed successfully request_id=f062382d
+2026-10-07 21:42:51 INFO gateway: received checkout request request_id=a7d33416 client_ip=10.0.48.6
+2026-10-07 21:42:51 INFO gateway: checkout completed successfully request_id=a7d33416
+2026-10-07 21:42:52 INFO gateway: received checkout request request_id=4a27fded client_ip=10.0.100.24
+2026-10-07 21:42:53 INFO gateway: checkout completed successfully request_id=4a27fded
+2026-10-07 21:42:54 INFO gateway: received checkout request request_id=95189644 client_ip=10.0.153.156
+2026-10-07 21:42:55 INFO gateway: checkout completed successfully request_id=95189644
+2026-10-07 21:42:56 INFO gateway: received checkout request request_id=2ac8f24c client_ip=10.0.165.204
+2026-10-07 21:42:57 ERROR gateway: orders service returned 502 request_id=2ac8f24c
+2026-10-07 21:42:58 INFO gateway: received checkout request request_id=7e0c767c client_ip=10.0.248.78
+2026-10-07 21:43:00 INFO gateway: checkout completed successfully request_id=7e0c767c
+2026-10-07 21:43:01 INFO gateway: received checkout request request_id=3b622241 client_ip=10.0.75.162
+2026-10-07 21:43:02 ERROR gateway: orders service returned 502 request_id=3b622241
+2026-10-07 21:43:03 INFO gateway: received checkout request request_id=45270cb2 client_ip=10.0.27.135
+2026-10-07 21:43:04 ERROR gateway: orders service returned 502 request_id=45270cb2
+2026-10-07 21:43:05 INFO gateway: received checkout request request_id=4ccfac3f client_ip=10.0.226.252
+2026-10-07 21:43:06 ERROR gateway: orders service returned 502 request_id=4ccfac3f
+2026-10-07 21:43:07 INFO gateway: received checkout request request_id=fa92e11d client_ip=10.0.245.105
+2026-10-07 21:43:07 INFO gateway: checkout completed successfully request_id=fa92e11d
+2026-10-07 21:43:08 INFO gateway: received checkout request request_id=c299798b client_ip=10.0.64.238
+2026-10-07 21:43:08 INFO gateway: checkout completed successfully request_id=c299798b
+2026-10-07 21:43:09 INFO gateway: received checkout request request_id=c3c636cb client_ip=10.0.90.8
+2026-10-07 21:43:09 INFO gateway: checkout completed successfully request_id=c3c636cb
+2026-10-07 21:43:10 INFO gateway: received checkout request request_id=7d2b8d79 client_ip=10.0.10.15
+2026-10-07 21:43:10 INFO gateway: checkout completed successfully request_id=7d2b8d79
+2026-10-07 21:43:11 INFO gateway: received checkout request request_id=3eb6bb13 client_ip=10.0.116.3
+2026-10-07 21:43:11 INFO gateway: checkout completed successfully request_id=3eb6bb13
+2026-10-07 21:43:12 INFO gateway: received checkout request request_id=29f499aa client_ip=10.0.218.111
+2026-10-07 21:43:12 INFO gateway: checkout completed successfully request_id=29f499aa
+2026-10-07 21:43:13 INFO gateway: received checkout request request_id=d3ae9696 client_ip=10.0.74.230
+2026-10-07 21:43:13 INFO gateway: checkout completed successfully request_id=d3ae9696
+2026-10-07 21:43:14 INFO gateway: received checkout request request_id=0e20b4f9 client_ip=10.0.173.150
+2026-10-07 21:43:14 INFO gateway: checkout completed successfully request_id=0e20b4f9
+2026-10-07 21:43:15 INFO gateway: received checkout request request_id=2ed350df client_ip=10.0.161.226
+2026-10-07 21:43:15 INFO gateway: checkout completed successfully request_id=2ed350df
+2026-10-07 21:43:16 INFO gateway: received checkout request request_id=a4439942 client_ip=10.0.42.236
+2026-10-07 21:43:16 INFO gateway: checkout completed successfully request_id=a4439942
+2026-10-07 21:43:17 INFO gateway: received checkout request request_id=1204d5d2 client_ip=10.0.141.78
+2026-10-07 21:43:18 INFO gateway: checkout completed successfully request_id=1204d5d2
+2026-10-07 21:43:19 INFO gateway: received checkout request request_id=0a5cc924 client_ip=10.0.50.18
+2026-10-07 21:43:19 INFO gateway: checkout completed successfully request_id=0a5cc924
+2026-10-07 21:43:20 INFO gateway: received checkout request request_id=5bfe0dcb client_ip=10.0.55.147
+2026-10-07 21:43:20 INFO gateway: checkout completed successfully request_id=5bfe0dcb
+2026-10-07 21:43:21 INFO gateway: received checkout request request_id=0af06ef4 client_ip=10.0.103.49
+2026-10-07 21:43:21 INFO gateway: checkout completed successfully request_id=0af06ef4
+2026-10-07 21:43:22 INFO gateway: received checkout request request_id=d33799b2 client_ip=10.0.194.174
+2026-10-07 21:43:22 INFO gateway: checkout completed successfully request_id=d33799b2
+2026-10-07 21:43:23 INFO gateway: received checkout request request_id=97619111 client_ip=10.0.19.195
+2026-10-07 21:43:23 INFO gateway: checkout completed successfully request_id=97619111
+2026-10-07 21:43:24 INFO gateway: received checkout request request_id=61c23c9b client_ip=10.0.117.199
+2026-10-07 21:43:24 INFO gateway: checkout completed successfully request_id=61c23c9b
+2026-10-07 21:43:25 INFO gateway: received checkout request request_id=dc69e4c2 client_ip=10.0.86.86
+2026-10-07 21:43:25 INFO gateway: checkout completed successfully request_id=dc69e4c2
+2026-10-07 21:43:26 INFO gateway: received checkout request request_id=007a25bb client_ip=10.0.71.254
+2026-10-07 21:43:26 INFO gateway: checkout completed successfully request_id=007a25bb
+2026-10-07 21:43:27 INFO gateway: received checkout request request_id=77ac17bf client_ip=10.0.227.201
+2026-10-07 21:43:27 ERROR gateway: orders service returned 502 request_id=77ac17bf
+2026-10-07 21:43:28 INFO gateway: received checkout request request_id=b3b44b0d client_ip=10.0.221.79
+2026-10-07 21:43:28 INFO gateway: checkout completed successfully request_id=b3b44b0d
+2026-10-07 21:43:29 INFO gateway: received checkout request request_id=5e77cce8 client_ip=10.0.139.40
+2026-10-07 21:43:29 INFO gateway: checkout completed successfully request_id=5e77cce8
+2026-10-07 21:43:30 INFO gateway: received checkout request request_id=1b4846ec client_ip=10.0.244.42
+2026-10-07 21:43:30 INFO gateway: checkout completed successfully request_id=1b4846ec
+2026-10-07 21:43:31 INFO gateway: received checkout request request_id=5f746d76 client_ip=10.0.80.119
+2026-10-07 21:43:31 INFO gateway: checkout completed successfully request_id=5f746d76
+2026-10-07 21:43:32 INFO gateway: received checkout request request_id=ab938579 client_ip=10.0.71.31
+2026-10-07 21:43:32 INFO gateway: checkout completed successfully request_id=ab938579
+2026-10-07 21:43:33 INFO gateway: received checkout request request_id=ff2bfe70 client_ip=10.0.40.101
+2026-10-07 21:43:33 INFO gateway: checkout completed successfully request_id=ff2bfe70
+2026-10-07 21:43:34 INFO gateway: received checkout request request_id=c253f90c client_ip=10.0.181.176
+2026-10-07 21:43:34 INFO gateway: checkout completed successfully request_id=c253f90c
+2026-10-07 21:43:35 INFO gateway: received checkout request request_id=06c1127b client_ip=10.0.179.212
+2026-10-07 21:43:35 INFO gateway: checkout completed successfully request_id=06c1127b
+2026-10-07 21:43:36 INFO gateway: received checkout request request_id=bbfc1bd4 client_ip=10.0.173.208
+2026-10-07 21:43:36 INFO gateway: checkout completed successfully request_id=bbfc1bd4
+2026-10-07 21:43:37 INFO gateway: received checkout request request_id=3d75318e client_ip=10.0.35.220
+2026-10-07 21:43:37 INFO gateway: checkout completed successfully request_id=3d75318e
+2026-10-07 21:43:38 INFO gateway: received checkout request request_id=1a69bbac client_ip=10.0.198.116
+2026-10-07 21:43:38 INFO gateway: checkout completed successfully request_id=1a69bbac
+2026-10-07 21:43:39 INFO gateway: received checkout request request_id=1ca51299 client_ip=10.0.250.223
+2026-10-07 21:43:39 INFO gateway: checkout completed successfully request_id=1ca51299
+2026-10-07 21:43:40 INFO gateway: received checkout request request_id=1e38d61c client_ip=10.0.248.27
+2026-10-07 21:43:40 INFO gateway: checkout completed successfully request_id=1e38d61c
+2026-10-07 21:43:41 INFO gateway: received checkout request request_id=6d1dbcb6 client_ip=10.0.176.45
+2026-10-07 21:43:41 INFO gateway: checkout completed successfully request_id=6d1dbcb6
+2026-10-07 21:43:42 INFO gateway: received checkout request request_id=c561293a client_ip=10.0.246.73
+2026-10-07 21:43:42 INFO gateway: checkout completed successfully request_id=c561293a
+2026-10-07 21:43:43 INFO gateway: received checkout request request_id=a0a9c4f4 client_ip=10.0.248.75
+2026-10-07 21:43:43 INFO gateway: checkout completed successfully request_id=a0a9c4f4
+2026-10-07 21:43:44 INFO gateway: received checkout request request_id=9f8a65f5 client_ip=10.0.145.2
+2026-10-07 21:43:44 INFO gateway: checkout completed successfully request_id=9f8a65f5
+2026-10-07 21:43:45 INFO gateway: received checkout request request_id=2ac46bec client_ip=10.0.89.14
+2026-10-07 21:43:45 INFO gateway: checkout completed successfully request_id=2ac46bec
+2026-10-07 21:43:46 INFO gateway: received checkout request request_id=e0400705 client_ip=10.0.254.63
+2026-10-07 21:43:46 INFO gateway: checkout completed successfully request_id=e0400705
+2026-10-07 21:43:47 INFO gateway: received checkout request request_id=b69cdb15 client_ip=10.0.175.110
+2026-10-07 21:43:47 INFO gateway: checkout completed successfully request_id=b69cdb15
+2026-10-07 21:43:48 INFO gateway: received checkout request request_id=0a4d19f8 client_ip=10.0.154.22
+2026-10-07 21:43:48 INFO gateway: checkout completed successfully request_id=0a4d19f8
+2026-10-07 21:43:50 INFO gateway: received checkout request request_id=3c520858 client_ip=10.0.67.17
+2026-10-07 21:43:50 INFO gateway: checkout completed successfully request_id=3c520858
+2026-10-07 21:43:51 INFO gateway: received checkout request request_id=74cfd7db client_ip=10.0.152.52
+2026-10-07 21:43:51 INFO gateway: checkout completed successfully request_id=74cfd7db
+2026-10-07 21:43:52 INFO gateway: received checkout request request_id=5ba0ae6a client_ip=10.0.227.186
+2026-10-07 21:43:52 INFO gateway: checkout completed successfully request_id=5ba0ae6a
+2026-10-07 21:43:53 INFO gateway: received checkout request request_id=5b24bb9f client_ip=10.0.190.163
+2026-10-07 21:43:53 INFO gateway: checkout completed successfully request_id=5b24bb9f
+2026-10-07 21:43:54 INFO gateway: received checkout request request_id=040c9b89 client_ip=10.0.149.133
+2026-10-07 21:43:54 INFO gateway: checkout completed successfully request_id=040c9b89
+2026-10-07 21:43:55 INFO gateway: received checkout request request_id=26d08cb1 client_ip=10.0.224.163
+2026-10-07 21:43:55 INFO gateway: checkout completed successfully request_id=26d08cb1
+2026-10-07 21:43:56 INFO gateway: received checkout request request_id=ca0d55f9 client_ip=10.0.99.200
+2026-10-07 21:43:56 INFO gateway: checkout completed successfully request_id=ca0d55f9
+2026-10-07 21:43:57 INFO gateway: received checkout request request_id=3ebac1b7 client_ip=10.0.226.52
+2026-10-07 21:43:57 ERROR gateway: orders service returned 503 request_id=3ebac1b7
+2026-10-07 21:43:58 INFO gateway: received checkout request request_id=f203b175 client_ip=10.0.106.67
+2026-10-07 21:43:58 ERROR gateway: orders service returned 503 request_id=f203b175
+2026-10-07 21:43:59 INFO gateway: received checkout request request_id=4bc482c7 client_ip=10.0.16.137
+2026-10-07 21:43:59 ERROR gateway: orders service returned 503 request_id=4bc482c7
+2026-10-07 21:44:00 INFO gateway: received checkout request request_id=b0baa1a5 client_ip=10.0.111.42
+2026-10-07 21:44:00 ERROR gateway: orders service returned 503 request_id=b0baa1a5
+2026-10-07 21:44:01 INFO gateway: received checkout request request_id=2e54e8b7 client_ip=10.0.222.186
+2026-10-07 21:44:01 ERROR gateway: orders service returned 503 request_id=2e54e8b7
+2026-10-07 21:44:02 INFO gateway: received checkout request request_id=95f8efd9 client_ip=10.0.63.149
+2026-10-07 21:44:02 ERROR gateway: orders service returned 503 request_id=95f8efd9
+2026-10-07 21:44:03 INFO gateway: received checkout request request_id=c7c82434 client_ip=10.0.73.253
+2026-10-07 21:44:03 ERROR gateway: orders service returned 503 request_id=c7c82434
+2026-10-07 21:44:04 INFO gateway: received checkout request request_id=da591954 client_ip=10.0.226.223
+2026-10-07 21:44:04 ERROR gateway: orders service returned 503 request_id=da591954
+2026-10-07 21:44:05 INFO gateway: received checkout request request_id=a62111e8 client_ip=10.0.4.77
+2026-10-07 21:44:05 ERROR gateway: orders service returned 503 request_id=a62111e8
+2026-10-07 21:44:06 INFO gateway: received checkout request request_id=fe1ea940 client_ip=10.0.174.136
+2026-10-07 21:44:06 ERROR gateway: orders service returned 503 request_id=fe1ea940
+2026-10-07 21:44:07 INFO gateway: received checkout request request_id=ce9fef84 client_ip=10.0.248.71
+2026-10-07 21:44:07 INFO gateway: checkout completed successfully request_id=ce9fef84
+2026-10-07 21:44:08 INFO gateway: received checkout request request_id=9c197b4f client_ip=10.0.199.206
+2026-10-07 21:44:08 INFO gateway: checkout completed successfully request_id=9c197b4f
+2026-10-07 21:44:09 INFO gateway: received checkout request request_id=2a020555 client_ip=10.0.75.129
+2026-10-07 21:44:09 INFO gateway: checkout completed successfully request_id=2a020555
+2026-10-07 21:44:10 INFO gateway: received checkout request request_id=6d1b224c client_ip=10.0.110.132
+2026-10-07 21:44:10 INFO gateway: checkout completed successfully request_id=6d1b224c
+2026-10-07 21:44:11 INFO gateway: received checkout request request_id=4824f8cf client_ip=10.0.158.124
+2026-10-07 21:44:11 INFO gateway: checkout completed successfully request_id=4824f8cf
+2026-10-07 21:44:12 INFO gateway: received checkout request request_id=12689f82 client_ip=10.0.196.91
+2026-10-07 21:44:12 INFO gateway: checkout completed successfully request_id=12689f82
+2026-10-07 21:44:13 INFO gateway: received checkout request request_id=11eec6e4 client_ip=10.0.199.162
+2026-10-07 21:44:13 INFO gateway: checkout completed successfully request_id=11eec6e4
+2026-10-07 21:44:14 INFO gateway: received checkout request request_id=716b8a5f client_ip=10.0.32.104
+2026-10-07 21:44:14 INFO gateway: checkout completed successfully request_id=716b8a5f
+2026-10-07 21:44:15 INFO gateway: received checkout request request_id=5d3406dd client_ip=10.0.83.67
+2026-10-07 21:44:15 INFO gateway: checkout completed successfully request_id=5d3406dd
+2026-10-07 21:44:16 INFO gateway: received checkout request request_id=2858093c client_ip=10.0.233.75
+2026-10-07 21:44:16 INFO gateway: checkout completed successfully request_id=2858093c
+2026-10-07 21:44:17 INFO gateway: received checkout request request_id=387788f7 client_ip=10.0.181.62
+2026-10-07 21:44:17 INFO gateway: checkout completed successfully request_id=387788f7
+2026-10-07 21:44:18 INFO gateway: received checkout request request_id=5f814fbe client_ip=10.0.216.84
+2026-10-07 21:44:18 INFO gateway: checkout completed successfully request_id=5f814fbe
+2026-10-07 21:44:19 INFO gateway: received checkout request request_id=7a9e2620 client_ip=10.0.227.224
+2026-10-07 21:44:19 INFO gateway: checkout completed successfully request_id=7a9e2620
+2026-10-07 21:44:20 INFO gateway: received checkout request request_id=99ba287d client_ip=10.0.122.79
+2026-10-07 21:44:20 INFO gateway: checkout completed successfully request_id=99ba287d
+2026-10-07 21:44:21 INFO gateway: received checkout request request_id=721f7078 client_ip=10.0.142.51
+2026-10-07 21:44:21 INFO gateway: checkout completed successfully request_id=721f7078
+2026-10-07 21:44:22 INFO gateway: received checkout request request_id=f0c7a343 client_ip=10.0.18.2
+2026-10-07 21:44:22 INFO gateway: checkout completed successfully request_id=f0c7a343
+2026-10-07 21:44:23 INFO gateway: received checkout request request_id=f522cb84 client_ip=10.0.92.133
+2026-10-07 21:44:23 INFO gateway: checkout completed successfully request_id=f522cb84
+2026-10-07 21:44:24 INFO gateway: received checkout request request_id=457c1d6d client_ip=10.0.67.72
+2026-10-07 21:44:24 INFO gateway: checkout completed successfully request_id=457c1d6d
+2026-10-07 21:44:25 INFO gateway: received checkout request request_id=cb6c6e55 client_ip=10.0.115.13
+2026-10-07 21:44:25 INFO gateway: checkout completed successfully request_id=cb6c6e55
+2026-10-07 21:44:27 INFO gateway: received checkout request request_id=2a73d9aa client_ip=10.0.255.238
+2026-10-07 21:44:27 INFO gateway: checkout completed successfully request_id=2a73d9aa
+2026-10-07 21:44:28 INFO gateway: received checkout request request_id=a0e32792 client_ip=10.0.19.63
+2026-10-07 21:44:28 INFO gateway: checkout completed successfully request_id=a0e32792
+2026-10-07 21:44:29 INFO gateway: received checkout request request_id=13f1eb50 client_ip=10.0.13.60
+2026-10-07 21:44:29 INFO gateway: checkout completed successfully request_id=13f1eb50
+2026-10-07 21:44:30 INFO gateway: received checkout request request_id=85033e90 client_ip=10.0.22.187
+2026-10-07 21:44:30 INFO gateway: checkout completed successfully request_id=85033e90
+2026-10-07 21:44:31 INFO gateway: received checkout request request_id=5113d5aa client_ip=10.0.200.89
+2026-10-07 21:44:31 INFO gateway: checkout completed successfully request_id=5113d5aa
+2026-10-07 21:44:31 INFO gateway: fault armed type=dependency_timeout duration_s=8
+2026-10-07 21:44:32 INFO gateway: received checkout request request_id=70e99e2d client_ip=10.0.43.85
+2026-10-07 21:44:32 WARNING gateway: downstream call to orders exceeded timeout threshold, retrying
+2026-10-07 21:44:35 ERROR gateway: checkout aborted before dispatch request_id=70e99e2d
+2026-10-07 21:44:36 INFO gateway: received checkout request request_id=a27dc98b client_ip=10.0.231.192
+2026-10-07 21:44:36 WARNING gateway: downstream call to orders exceeded timeout threshold, retrying
+2026-10-07 21:44:40 ERROR gateway: checkout aborted before dispatch request_id=a27dc98b
+2026-10-07 21:44:41 INFO gateway: received checkout request request_id=222ca4ec client_ip=10.0.239.13
+2026-10-07 21:44:41 INFO gateway: checkout completed successfully request_id=222ca4ec
+2026-10-07 21:44:42 INFO gateway: received checkout request request_id=5f792e0f client_ip=10.0.237.17
+2026-10-07 21:44:42 INFO gateway: checkout completed successfully request_id=5f792e0f
+2026-10-07 21:44:43 INFO gateway: received checkout request request_id=15832df7 client_ip=10.0.47.144
+2026-10-07 21:44:43 INFO gateway: checkout completed successfully request_id=15832df7
+2026-10-07 21:44:44 INFO gateway: received checkout request request_id=e6c18755 client_ip=10.0.43.124
+2026-10-07 21:44:44 INFO gateway: checkout completed successfully request_id=e6c18755
+2026-10-07 21:44:45 INFO gateway: received checkout request request_id=77f5204b client_ip=10.0.230.129
+2026-10-07 21:44:45 INFO gateway: checkout completed successfully request_id=77f5204b
+2026-10-07 21:44:46 INFO gateway: received checkout request request_id=4f68fb47 client_ip=10.0.203.185
+2026-10-07 21:44:46 INFO gateway: checkout completed successfully request_id=4f68fb47
+2026-10-07 21:44:47 INFO gateway: received checkout request request_id=7a1451c0 client_ip=10.0.64.17
+2026-10-07 21:44:47 INFO gateway: checkout completed successfully request_id=7a1451c0
+2026-10-07 21:44:48 INFO gateway: received checkout request request_id=639e50ba client_ip=10.0.159.137
+2026-10-07 21:44:48 INFO gateway: checkout completed successfully request_id=639e50ba
+2026-10-07 21:44:49 INFO gateway: received checkout request request_id=b760986d client_ip=10.0.3.62
+2026-10-07 21:44:49 INFO gateway: checkout completed successfully request_id=b760986d
+2026-10-07 21:44:50 INFO gateway: received checkout request request_id=4b5b451c client_ip=10.0.42.190
+2026-10-07 21:44:50 INFO gateway: checkout completed successfully request_id=4b5b451c
+2026-10-07 21:44:51 INFO gateway: received checkout request request_id=6d6b9668 client_ip=10.0.79.79
+2026-10-07 21:44:51 INFO gateway: checkout completed successfully request_id=6d6b9668
+2026-10-07 21:44:52 INFO gateway: received checkout request request_id=527d0508 client_ip=10.0.210.165
+2026-10-07 21:44:52 INFO gateway: checkout completed successfully request_id=527d0508
+2026-10-07 21:44:53 INFO gateway: received checkout request request_id=5998b24c client_ip=10.0.104.181
+2026-10-07 21:44:53 INFO gateway: checkout completed successfully request_id=5998b24c
+2026-10-07 21:44:54 INFO gateway: received checkout request request_id=7d161790 client_ip=10.0.53.23
+2026-10-07 21:44:54 INFO gateway: checkout completed successfully request_id=7d161790
+2026-10-07 21:44:55 INFO gateway: received checkout request request_id=6e8064e9 client_ip=10.0.224.133
+2026-10-07 21:44:55 INFO gateway: checkout completed successfully request_id=6e8064e9
+2026-10-07 21:44:56 INFO gateway: received checkout request request_id=f90d9a1b client_ip=10.0.237.235
+2026-10-07 21:44:56 INFO gateway: checkout completed successfully request_id=f90d9a1b
+2026-10-07 21:44:57 INFO gateway: received checkout request request_id=2b150535 client_ip=10.0.191.69
+2026-10-07 21:44:57 INFO gateway: checkout completed successfully request_id=2b150535
+2026-10-07 21:44:58 INFO gateway: received checkout request request_id=ea7df2d3 client_ip=10.0.135.8
+2026-10-07 21:44:58 INFO gateway: checkout completed successfully request_id=ea7df2d3
+2026-10-07 21:44:59 INFO gateway: received checkout request request_id=63de297d client_ip=10.0.201.246
+2026-10-07 21:44:59 INFO gateway: checkout completed successfully request_id=63de297d
+2026-10-07 21:45:00 INFO gateway: received checkout request request_id=0e18f14d client_ip=10.0.93.96
+2026-10-07 21:45:00 INFO gateway: checkout completed successfully request_id=0e18f14d
+2026-10-07 21:45:01 INFO gateway: received checkout request request_id=f6321548 client_ip=10.0.57.250
+2026-10-07 21:45:01 ERROR gateway: orders service returned 502 request_id=f6321548
+2026-10-07 21:45:02 INFO gateway: received checkout request request_id=3060583f client_ip=10.0.153.23
+2026-10-07 21:45:02 INFO gateway: checkout completed successfully request_id=3060583f
+2026-10-07 21:45:03 INFO gateway: received checkout request request_id=98c8b823 client_ip=10.0.225.103
+2026-10-07 21:45:03 INFO gateway: checkout completed successfully request_id=98c8b823
+2026-10-07 21:45:04 INFO gateway: received checkout request request_id=62286aa4 client_ip=10.0.53.106
+2026-10-07 21:45:05 INFO gateway: checkout completed successfully request_id=62286aa4
+2026-10-07 21:45:06 INFO gateway: received checkout request request_id=e3266d53 client_ip=10.0.193.30
+2026-10-07 21:45:06 INFO gateway: checkout completed successfully request_id=e3266d53
+2026-10-07 21:45:07 INFO gateway: received checkout request request_id=e5483717 client_ip=10.0.73.7
+2026-10-07 21:45:07 INFO gateway: checkout completed successfully request_id=e5483717
+2026-10-07 21:45:08 INFO gateway: received checkout request request_id=3c761816 client_ip=10.0.103.54
+2026-10-07 21:45:08 INFO gateway: checkout completed successfully request_id=3c761816
+2026-10-07 21:45:09 INFO gateway: received checkout request request_id=d5066e50 client_ip=10.0.48.54
+2026-10-07 21:45:09 INFO gateway: checkout completed successfully request_id=d5066e50
+2026-10-07 21:45:10 INFO gateway: received checkout request request_id=84ec1e68 client_ip=10.0.27.187
+2026-10-07 21:45:10 INFO gateway: checkout completed successfully request_id=84ec1e68
+2026-10-07 21:45:11 INFO gateway: received checkout request request_id=7ee30ea7 client_ip=10.0.234.12
+2026-10-07 21:45:11 INFO gateway: checkout completed successfully request_id=7ee30ea7
+2026-10-07 21:45:12 INFO gateway: received checkout request request_id=da590703 client_ip=10.0.30.62
+2026-10-07 21:45:12 INFO gateway: checkout completed successfully request_id=da590703
+2026-10-07 21:45:13 INFO gateway: received checkout request request_id=faab07f3 client_ip=10.0.213.90
+2026-10-07 21:45:13 INFO gateway: checkout completed successfully request_id=faab07f3
+2026-10-07 21:45:14 INFO gateway: received checkout request request_id=dc57756f client_ip=10.0.64.183
+2026-10-07 21:45:14 INFO gateway: checkout completed successfully request_id=dc57756f
+2026-10-07 21:45:15 INFO gateway: received checkout request request_id=e30af436 client_ip=10.0.182.106
+2026-10-07 21:45:15 INFO gateway: checkout completed successfully request_id=e30af436
+2026-10-07 21:45:16 INFO gateway: received checkout request request_id=c8b31003 client_ip=10.0.43.235
+2026-10-07 21:45:16 INFO gateway: checkout completed successfully request_id=c8b31003
+2026-10-07 21:45:17 INFO gateway: received checkout request request_id=9469b297 client_ip=10.0.196.140
+2026-10-07 21:45:17 INFO gateway: checkout completed successfully request_id=9469b297
+2026-10-07 21:45:18 INFO gateway: received checkout request request_id=fb620151 client_ip=10.0.21.216
+2026-10-07 21:45:18 INFO gateway: checkout completed successfully request_id=fb620151
+2026-10-07 21:45:19 INFO gateway: received checkout request request_id=83f9d880 client_ip=10.0.33.123
+2026-10-07 21:45:19 INFO gateway: checkout completed successfully request_id=83f9d880
+2026-10-07 21:45:20 INFO gateway: received checkout request request_id=a76e345b client_ip=10.0.21.225
+2026-10-07 21:45:20 INFO gateway: checkout completed successfully request_id=a76e345b
+2026-10-07 21:45:21 INFO gateway: received checkout request request_id=c70c0456 client_ip=10.0.49.212
+2026-10-07 21:45:21 INFO gateway: checkout completed successfully request_id=c70c0456
+2026-10-07 21:45:22 INFO gateway: received checkout request request_id=1804dc9d client_ip=10.0.47.39
+2026-10-07 21:45:22 INFO gateway: checkout completed successfully request_id=1804dc9d
+2026-10-07 21:45:23 INFO gateway: received checkout request request_id=24cec6cb client_ip=10.0.201.240
+2026-10-07 21:45:23 INFO gateway: checkout completed successfully request_id=24cec6cb
+2026-10-07 21:45:24 INFO gateway: received checkout request request_id=7c66e583 client_ip=10.0.58.104
+2026-10-07 21:45:24 INFO gateway: checkout completed successfully request_id=7c66e583
+2026-10-07 21:45:25 INFO gateway: received checkout request request_id=d482e18a client_ip=10.0.240.100
+2026-10-07 21:45:25 INFO gateway: checkout completed successfully request_id=d482e18a
+2026-10-07 21:45:26 INFO gateway: received checkout request request_id=c96011f7 client_ip=10.0.35.225
+2026-10-07 21:45:26 INFO gateway: checkout completed successfully request_id=c96011f7
+2026-10-07 21:45:27 INFO gateway: received checkout request request_id=002888e1 client_ip=10.0.44.78
+2026-10-07 21:45:27 INFO gateway: checkout completed successfully request_id=002888e1
+2026-10-07 21:45:28 INFO gateway: received checkout request request_id=f8091703 client_ip=10.0.113.239
+2026-10-07 21:45:28 INFO gateway: checkout completed successfully request_id=f8091703
+2026-10-07 21:45:29 INFO gateway: received checkout request request_id=6a0ae22d client_ip=10.0.36.232
+2026-10-07 21:45:29 INFO gateway: checkout completed successfully request_id=6a0ae22d
+2026-10-07 21:45:30 INFO gateway: received checkout request request_id=04aee374 client_ip=10.0.140.221
+2026-10-07 21:45:30 INFO gateway: checkout completed successfully request_id=04aee374
+2026-10-07 21:45:31 INFO gateway: received checkout request request_id=1d2d84ba client_ip=10.0.161.75
+2026-10-07 21:45:31 INFO gateway: checkout completed successfully request_id=1d2d84ba
+2026-10-07 21:45:32 INFO gateway: received checkout request request_id=c955a217 client_ip=10.0.17.77
+2026-10-07 21:45:33 ERROR gateway: orders service returned 502 request_id=c955a217
+2026-10-07 21:45:34 INFO gateway: received checkout request request_id=2b281a65 client_ip=10.0.135.109
+2026-10-07 21:45:35 ERROR gateway: orders service returned 502 request_id=2b281a65
+2026-10-07 21:45:36 INFO gateway: received checkout request request_id=8c55d556 client_ip=10.0.179.239
+2026-10-07 21:45:37 ERROR gateway: orders service returned 502 request_id=8c55d556
+2026-10-07 21:45:38 INFO gateway: received checkout request request_id=2333a788 client_ip=10.0.115.166
+2026-10-07 21:45:39 ERROR gateway: orders service returned 502 request_id=2333a788
+2026-10-07 21:45:40 INFO gateway: received checkout request request_id=72a85c1c client_ip=10.0.132.140
+2026-10-07 21:45:41 INFO gateway: checkout completed successfully request_id=72a85c1c
+2026-10-07 21:45:42 INFO gateway: received checkout request request_id=948cc688 client_ip=10.0.35.143
+2026-10-07 21:45:43 ERROR gateway: orders service returned 502 request_id=948cc688
+2026-10-07 21:45:44 INFO gateway: received checkout request request_id=9098f88f client_ip=10.0.250.27
+2026-10-07 21:45:44 INFO gateway: checkout completed successfully request_id=9098f88f
+2026-10-07 21:45:45 INFO gateway: received checkout request request_id=43fcad14 client_ip=10.0.137.1
+2026-10-07 21:45:45 INFO gateway: checkout completed successfully request_id=43fcad14
+2026-10-07 21:45:46 INFO gateway: received checkout request request_id=77d3aa49 client_ip=10.0.94.234
+2026-10-07 21:45:46 INFO gateway: checkout completed successfully request_id=77d3aa49
+2026-10-07 21:45:47 INFO gateway: received checkout request request_id=f126f530 client_ip=10.0.118.25
+2026-10-07 21:45:47 INFO gateway: checkout completed successfully request_id=f126f530
+2026-10-07 21:45:48 INFO gateway: received checkout request request_id=877a62ab client_ip=10.0.187.7
+2026-10-07 21:45:48 INFO gateway: checkout completed successfully request_id=877a62ab
+2026-10-07 21:45:49 INFO gateway: received checkout request request_id=9b998f88 client_ip=10.0.120.71
+2026-10-07 21:45:49 INFO gateway: checkout completed successfully request_id=9b998f88
+2026-10-07 21:45:50 INFO gateway: received checkout request request_id=ece44dcf client_ip=10.0.51.8
+2026-10-07 21:45:50 INFO gateway: checkout completed successfully request_id=ece44dcf
+2026-10-07 21:45:51 INFO gateway: received checkout request request_id=fc452580 client_ip=10.0.153.178
+2026-10-07 21:45:51 INFO gateway: checkout completed successfully request_id=fc452580
+2026-10-07 21:45:52 INFO gateway: received checkout request request_id=d5d661fb client_ip=10.0.228.175
+2026-10-07 21:45:52 INFO gateway: checkout completed successfully request_id=d5d661fb
+2026-10-07 21:45:53 INFO gateway: received checkout request request_id=3d9603a5 client_ip=10.0.211.15
+2026-10-07 21:45:53 INFO gateway: checkout completed successfully request_id=3d9603a5
+2026-10-07 21:45:54 INFO gateway: received checkout request request_id=b53d604f client_ip=10.0.102.157
+2026-10-07 21:45:54 INFO gateway: checkout completed successfully request_id=b53d604f
+2026-10-07 21:45:55 INFO gateway: received checkout request request_id=be926fce client_ip=10.0.116.152
+2026-10-07 21:45:55 INFO gateway: checkout completed successfully request_id=be926fce
+2026-10-07 21:45:56 INFO gateway: received checkout request request_id=6f12f98d client_ip=10.0.114.222
+2026-10-07 21:45:56 INFO gateway: checkout completed successfully request_id=6f12f98d
+2026-10-07 21:45:57 INFO gateway: received checkout request request_id=8743d060 client_ip=10.0.17.153
+2026-10-07 21:45:57 INFO gateway: checkout completed successfully request_id=8743d060
+2026-10-07 21:45:58 INFO gateway: received checkout request request_id=0a65198c client_ip=10.0.89.227
+2026-10-07 21:45:58 INFO gateway: checkout completed successfully request_id=0a65198c
+2026-10-07 21:45:59 INFO gateway: received checkout request request_id=21946b66 client_ip=10.0.104.209
+2026-10-07 21:45:59 INFO gateway: checkout completed successfully request_id=21946b66
+2026-10-07 21:46:00 INFO gateway: received checkout request request_id=fde16a73 client_ip=10.0.47.14
+2026-10-07 21:46:00 INFO gateway: checkout completed successfully request_id=fde16a73
+2026-10-07 21:46:01 INFO gateway: received checkout request request_id=dbf7d020 client_ip=10.0.122.110
+2026-10-07 21:46:01 INFO gateway: checkout completed successfully request_id=dbf7d020
+2026-10-07 21:46:02 INFO gateway: received checkout request request_id=51096c63 client_ip=10.0.56.201
+2026-10-07 21:46:02 INFO gateway: checkout completed successfully request_id=51096c63
+2026-10-07 21:46:03 INFO gateway: received checkout request request_id=fb715bde client_ip=10.0.146.239
+2026-10-07 21:46:03 INFO gateway: checkout completed successfully request_id=fb715bde
+2026-10-07 21:46:04 INFO gateway: received checkout request request_id=d63b13f1 client_ip=10.0.86.158
+2026-10-07 21:46:04 INFO gateway: checkout completed successfully request_id=d63b13f1
+2026-10-07 21:46:05 INFO gateway: received checkout request request_id=d78bef87 client_ip=10.0.152.166
+2026-10-07 21:46:05 INFO gateway: checkout completed successfully request_id=d78bef87
+2026-10-07 21:46:06 INFO gateway: received checkout request request_id=f6448a2b client_ip=10.0.93.124
+2026-10-07 21:46:06 INFO gateway: checkout completed successfully request_id=f6448a2b

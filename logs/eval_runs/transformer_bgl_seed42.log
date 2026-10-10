@@ -1,0 +1,1 @@
+[bgl] transformer seed=42: P=0.948 R=0.908 F1=0.927 PR-AUC=0.971 FA/10k=50.9 -> C:\Users\tejan\OneDrive\Desktop\drive\devops-log-analysis\results\bgl_transformer_seed42_eval.json

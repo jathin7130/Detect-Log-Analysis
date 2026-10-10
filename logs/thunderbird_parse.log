@@ -1,0 +1,22 @@
+[thunderbird] 500,000 lines parsed (28s elapsed)
+[thunderbird] 1,000,000 lines parsed (57s elapsed)
+[thunderbird] 1,500,000 lines parsed (86s elapsed)
+[thunderbird] 2,000,000 lines parsed (118s elapsed)
+[thunderbird] 2,500,000 lines parsed (161s elapsed)
+[thunderbird] 3,000,000 lines parsed (217s elapsed)
+[thunderbird] 3,500,000 lines parsed (265s elapsed)
+[thunderbird] 4,000,000 lines parsed (312s elapsed)
+[thunderbird] 4,500,000 lines parsed (362s elapsed)
+[thunderbird] 5,000,000 lines parsed (409s elapsed)
+[thunderbird] 5,500,000 lines parsed (455s elapsed)
+[thunderbird] 6,000,000 lines parsed (502s elapsed)
+[thunderbird] 6,500,000 lines parsed (549s elapsed)
+[thunderbird] 7,000,000 lines parsed (586s elapsed)
+[thunderbird] 7,500,000 lines parsed (616s elapsed)
+[thunderbird] 8,000,000 lines parsed (645s elapsed)
+[thunderbird] 8,500,000 lines parsed (685s elapsed)
+[thunderbird] 9,000,000 lines parsed (723s elapsed)
+[thunderbird] 9,500,000 lines parsed (760s elapsed)
+[thunderbird] done: 9,980,758/10,000,000 lines parsed, 1467 templates mined, 797s total
+[thunderbird] -> C:\Users\tejan\OneDrive\Desktop\drive\devops-log-analysis\data\masked\thunderbird\parsed.csv
+[thunderbird] -> C:\Users\tejan\OneDrive\Desktop\drive\devops-log-analysis\data\masked\thunderbird\templates.csv

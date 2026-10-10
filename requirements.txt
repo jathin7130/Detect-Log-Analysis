@@ -1,0 +1,13 @@
+pandas
+requests
+fastapi
+uvicorn
+numpy
+scipy
+scikit-learn
+drain3
+sentence-transformers
+faiss-cpu
+tqdm
+matplotlib
+pytest

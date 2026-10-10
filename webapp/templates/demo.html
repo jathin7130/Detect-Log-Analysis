@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>devops-log-intel // demo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/css/style.css?v=6">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand"><span class="dot"></span> devops-log-intel</div>
+  <nav>
+    <a href="/">dashboard</a>
+    <a href="/demo" class="active">demo</a>
+    <a href="/phases">phases</a>
+  </nav>
+  <div class="meta">incident walkthrough &nbsp;<span class="badge badge-ok">live — real RCA pipeline</span></div>
+</div>
+
+<div class="page">
+
+  <div class="section-title">case selector — all 20 hand-checked RCA cases</div>
+  <div class="panel" style="display:flex; align-items:center; gap:14px; flex-wrap:wrap;">
+    <select id="case-select" style="background:var(--panel); color:var(--text); border:1px solid var(--line); border-radius:3px; padding:6px 10px; font-family:var(--mono); font-size:12px; min-width:280px;"></select>
+    <span class="hint" id="case-hint"></span>
+  </div>
+
+  <div class="section-title">1. detected incident</div>
+  <div class="panel" id="incident-panel"></div>
+
+  <div class="section-title">2. raw log evidence</div>
+  <div class="panel">
+    <div class="log-console" id="log-console"></div>
+  </div>
+
+  <div class="section-title">3. retrieved evidence (real FAISS index)</div>
+  <div class="panel" id="evidence-panel"></div>
+
+  <div class="section-title">4. reliability gate output</div>
+  <div id="gate-panel"></div>
+
+  <div class="footer-note">
+    Every case here is the actual output of the Phase 7 pipeline: local llama3.1:8b (Ollama) &rarr; FAISS retrieval &rarr; an independent reliability gate that re-checks the model's own citations and confidence, overriding it when they don't hold up. Nothing on this page is scripted — pick any case above to see its real gate decision, including the cases where the gate overruled the model.
+  </div>
+
+</div>
+
+<script>
+let allCases = [];
+
+function sourceLabel(c) {
+  if (c.source === "testbed") return "testbed fault";
+  return `${c.source} anomaly`;
+}
+
+async function loadCaseList() {
+  const res = await fetch("/api/demo_cases");
+  const data = await res.json();
+  allCases = data.cases;
+
+  const select = document.getElementById("case-select");
+  select.innerHTML = allCases.map(c => {
+    const flag = c.gate_overrode_llm ? " ⚠ gate overrode LLM" : "";
+    return `<option value="${c.case_id}">${c.case_id} — ${sourceLabel(c)} — gate: ${c.gate_decision}${flag}</option>`;
+  }).join("");
+
+  select.value = data.default_answer_case;
+  select.addEventListener("change", () => loadCase(select.value));
+  loadCase(select.value);
+
+  document.getElementById("case-hint").textContent =
+    `try "${data.default_abstain_case}" to see a genuine self-abstain`;
+}
+
+async function loadCase(caseId) {
+  const res = await fetch(`/api/demo_incident?case_id=${encodeURIComponent(caseId)}`);
+  const data = await res.json();
+
+  const gt = data.ground_truth || {};
+  const gtLine = data.source === "testbed"
+    ? `${gt.fault_type} on ${gt.service}`
+    : `flagged anomaly (seq_id=${gt.seq_id}, detector=${gt.detector})`;
+
+  document.getElementById("incident-panel").innerHTML = `
+    <div class="panel-header">
+      <h3>${data.case_id}</h3>
+      <span class="hint">${data.source}</span>
+    </div>
+    <div>ground truth: <span class="mono-num">${gtLine}</span></div>
+  `;
+
+  const logHtml = (data.log_lines || []).slice(0, 20).map(l => `
+    <div class="log-line">
+      <span class="ts">${l.ts}</span> <span class="lvl-${l.level}">${l.level}</span> <span class="svc">${l.service}:</span> ${l.msg}
+    </div>`).join("") || "<div class='hint'>no raw log lines for this case</div>";
+  document.getElementById("log-console").innerHTML = logHtml;
+
+  const evHtml = data.evidence.map(e => `
+    <div class="evidence-item">
+      <span class="score">${e.score.toFixed(3)}</span>
+      <span class="badge badge-info">${e.doc_id}</span><br>
+      ${e.text}
+    </div>`).join("");
+  document.getElementById("evidence-panel").innerHTML = evHtml;
+
+  const gate = data.gate;
+  const bannerClass = gate.decision === "answer" ? "gate-answer" : "gate-abstain";
+  const bannerIcon = gate.decision === "answer" ? "✓ ANSWER" : "⚠ ABSTAIN";
+  const overrideNote = gate.gate_overrode_llm
+    ? `<div class="badge badge-warn" style="margin-left:auto">gate overrode LLM (LLM said "${gate.llm_decision}")</div>`
+    : `<span class="badge badge-ok" style="margin-left:auto">live</span>`;
+
+  document.getElementById("gate-panel").innerHTML = `
+    <div class="panel">
+      <div class="gate-banner ${bannerClass}">${bannerIcon} ${overrideNote}</div>
+      <p>${gate.diagnosis || "<em>(abstained — no diagnosis given)</em>"}</p>
+      <div class="grid">
+        <div class="stat-card panel"><div class="label">evidence coverage</div><div class="value">${(gate.evidence_coverage*100).toFixed(0)}%</div></div>
+        <div class="stat-card panel"><div class="label">confidence</div><div class="value">${(gate.confidence*100).toFixed(0)}%</div></div>
+      </div>
+    </div>
+  `;
+}
+
+loadCaseList();
+</script>
+
+</body>
+</html>

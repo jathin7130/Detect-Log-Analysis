@@ -1,0 +1,11 @@
+[bgl] combined-ablation seed=42 device=cuda mixed_precision=True window_size=5
+[bgl] train_windows=2,813,520 val_windows=602,870 vocab_size=1819
+[bgl] epoch 1/12 train_loss=0.4985 val_loss=0.1788 val_acc=0.9284 (85.4s elapsed)
+[bgl] epoch 2/12 train_loss=0.1655 val_loss=0.1539 val_acc=0.9394 (172.3s elapsed)
+[bgl] epoch 3/12 train_loss=0.1500 val_loss=0.1486 val_acc=0.9416 (259.3s elapsed)
+[bgl] epoch 4/12 train_loss=0.1458 val_loss=0.1466 val_acc=0.9418 (345.1s elapsed)
+[bgl] epoch 5/12 train_loss=0.1435 val_loss=0.1445 val_acc=0.9421 (432.6s elapsed)
+[bgl] epoch 6/12 train_loss=0.1421 val_loss=0.1447 val_acc=0.9405 (518.6s elapsed)
+[bgl] epoch 7/12 train_loss=0.1409 val_loss=0.1441 val_acc=0.9427 (605.7s elapsed)
+[bgl] early stopping at epoch 7
+[bgl] done. best_val_loss=0.1445 -> C:\Users\tejan\OneDrive\Desktop\drive\devops-log-analysis\models\bgl_lstm_combined_seed42.pt

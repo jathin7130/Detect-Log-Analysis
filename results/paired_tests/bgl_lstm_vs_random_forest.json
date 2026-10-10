@@ -1,0 +1,13 @@
+{
+  "dataset": "bgl",
+  "model_a": "lstm",
+  "model_b": "random_forest",
+  "f1_a": 0.9318181818181819,
+  "f1_b": 0.981994459833795,
+  "n_bootstrap": 2000,
+  "mean_diff": -0.05036413992141315,
+  "ci95_low": -0.06413191271466509,
+  "ci95_high": -0.03707254384875937,
+  "p_value": 0.0,
+  "significant_at_0.05": true
+}

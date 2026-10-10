@@ -1,0 +1,4 @@
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 2152.52it/s]
+C:\Users\tejan\OneDrive\Desktop\drive\devops-log-analysis\scripts\build_template_embeddings.py:38: FutureWarning: The `get_sentence_embedding_dimension` method has been renamed to `get_embedding_dimension`.
+  embed_dim = model.get_sentence_embedding_dimension()
+[bgl] 1819 templates embedded, table shape=(1820, 384) -> C:\Users\tejan\OneDrive\Desktop\drive\devops-log-analysis\data\features\bgl\template_embeddings.npy

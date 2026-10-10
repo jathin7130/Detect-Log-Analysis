@@ -1,0 +1,13 @@
+{
+  "dataset": "hdfs",
+  "model_a": "lstm",
+  "model_b": "random_forest",
+  "f1_a": 0.2995864053227837,
+  "f1_b": 0.998812821527503,
+  "n_bootstrap": 2000,
+  "mean_diff": -0.6990935259214308,
+  "ci95_low": -0.7148685891750204,
+  "ci95_high": -0.6833646305893147,
+  "p_value": 0.0,
+  "significant_at_0.05": true
+}

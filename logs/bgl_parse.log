@@ -1,0 +1,12 @@
+[bgl] 500,000 lines parsed (18s elapsed)
+[bgl] 1,000,000 lines parsed (53s elapsed)
+[bgl] 1,500,000 lines parsed (98s elapsed)
+[bgl] 2,000,000 lines parsed (122s elapsed)
+[bgl] 2,500,000 lines parsed (147s elapsed)
+[bgl] 3,000,000 lines parsed (172s elapsed)
+[bgl] 3,500,000 lines parsed (230s elapsed)
+[bgl] 4,000,000 lines parsed (256s elapsed)
+[bgl] 4,500,000 lines parsed (296s elapsed)
+[bgl] done: 4,713,493/4,747,963 lines parsed, 1819 templates mined, 318s total
+[bgl] -> C:\Users\tejan\OneDrive\Desktop\drive\devops-log-analysis\data\masked\bgl\parsed.csv
+[bgl] -> C:\Users\tejan\OneDrive\Desktop\drive\devops-log-analysis\data\masked\bgl\templates.csv

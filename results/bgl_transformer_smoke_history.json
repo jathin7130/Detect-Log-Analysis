@@ -1,0 +1,28 @@
+{
+  "dataset": "bgl",
+  "seed": 42,
+  "device": "cuda",
+  "mixed_precision": true,
+  "smoke_test": true,
+  "best_val_loss": 4.503035068511963,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 7.277374973297119,
+      "val_loss": 6.035816192626953,
+      "val_acc": 0.76
+    },
+    {
+      "epoch": 2,
+      "train_loss": 6.2872330258687334,
+      "val_loss": 5.106582164764404,
+      "val_acc": 0.76
+    },
+    {
+      "epoch": 3,
+      "train_loss": 5.523494767506917,
+      "val_loss": 4.503035068511963,
+      "val_acc": 0.76
+    }
+  ]
+}

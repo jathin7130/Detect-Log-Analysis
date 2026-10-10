@@ -1,0 +1,13 @@
+{
+  "dataset": "hdfs",
+  "model_a": "lstm",
+  "model_b": "isolation_forest",
+  "f1_a": 0.2995864053227837,
+  "f1_b": 0.6824602707474985,
+  "n_bootstrap": 2000,
+  "mean_diff": -0.38257850623000966,
+  "ci95_low": -0.40113708762058653,
+  "ci95_high": -0.36414118911721977,
+  "p_value": 0.0,
+  "significant_at_0.05": true
+}

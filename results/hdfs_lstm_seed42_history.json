@@ -1,0 +1,41 @@
+{
+  "dataset": "hdfs",
+  "seed": 42,
+  "device": "cuda",
+  "mixed_precision": true,
+  "smoke_test": false,
+  "best_val_loss": 0.3103,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.3579,
+      "val_loss": 0.3133,
+      "val_acc": 0.8991
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.3131,
+      "val_loss": 0.3113,
+      "val_acc": 0.8995
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.3116,
+      "val_loss": 0.3103,
+      "val_acc": 0.8997
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.311,
+      "val_loss": 0.3102,
+      "val_acc": 0.8995
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.3106,
+      "val_loss": 0.3099,
+      "val_acc": 0.8998
+    }
+  ],
+  "note": "reconstructed from logs/lstm_runs/hdfs_seed42.log after the window=10 sensitivity check overwrote this file without a backup (the .pt checkpoint and _eval.json WERE correctly backed up/restored; only this history file was missed)"
+}

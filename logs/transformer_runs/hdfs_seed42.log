@@ -1,0 +1,10 @@
+[hdfs] seed=42 device=cuda mixed_precision=True window_size=5 smoke_test=False
+[hdfs] train_windows=5,666,992 val_windows=1,212,245 vocab_size=44
+[hdfs] epoch 1/12 train_loss=0.3497 val_loss=0.3163 val_acc=0.8984 (210.0s elapsed)
+[hdfs] epoch 2/12 train_loss=0.3175 val_loss=0.3137 val_acc=0.8990 (405.5s elapsed)
+[hdfs] epoch 3/12 train_loss=0.3154 val_loss=0.3130 val_acc=0.8993 (599.0s elapsed)
+[hdfs] epoch 4/12 train_loss=0.3143 val_loss=0.3123 val_acc=0.8992 (792.6s elapsed)
+[hdfs] epoch 5/12 train_loss=0.3137 val_loss=0.3133 val_acc=0.8994 (987.7s elapsed)
+[hdfs] epoch 6/12 train_loss=0.3133 val_loss=0.3119 val_acc=0.8995 (1180.8s elapsed)
+[hdfs] early stopping at epoch 6 (no val_loss improvement for 2 epochs)
+[hdfs] done. best_val_loss=0.3123 -> C:\Users\tejan\OneDrive\Desktop\drive\devops-log-analysis\models\hdfs_transformer_seed42.pt, C:\Users\tejan\OneDrive\Desktop\drive\devops-log-analysis\results\hdfs_transformer_seed42_history.json

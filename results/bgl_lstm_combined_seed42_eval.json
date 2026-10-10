@@ -1,0 +1,22 @@
+{
+  "threshold": 0.1368421052631579,
+  "tp": 659,
+  "fp": 38,
+  "fn": 66,
+  "tn": 6310,
+  "precision": 0.945480631276901,
+  "recall": 0.9089655172413793,
+  "f1": 0.9268635724331927,
+  "pr_auc": 0.9699023999915427,
+  "false_positive_rate": 0.0059861373660995585,
+  "false_alarms_per_10k_events": 53.725434751873316,
+  "n_total": 7073,
+  "dataset": "bgl",
+  "model": "lstm_combined",
+  "seed": 42,
+  "topk": 3,
+  "window_size": 5,
+  "vocab_size": 1819,
+  "n_too_short_val": 0,
+  "n_too_short_test": 0
+}

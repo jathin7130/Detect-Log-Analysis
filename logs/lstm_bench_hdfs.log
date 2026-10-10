@@ -1,0 +1,4 @@
+[hdfs] device=cuda mixed_precision=True window_size=5 smoke_test=False
+[hdfs] train_windows=5,666,992 val_windows=1,212,245 vocab_size=44
+[hdfs] epoch 1/1 train_loss=0.3214 val_loss=0.3107 val_acc=0.8995 (295.7s elapsed)
+[hdfs] done. best_val_loss=0.3107 -> C:\Users\tejan\OneDrive\Desktop\drive\devops-log-analysis\models\hdfs_lstm.pt, C:\Users\tejan\OneDrive\Desktop\drive\devops-log-analysis\results\hdfs_lstm_history.json

@@ -1,0 +1,22 @@
+{
+  "threshold": 0.07894736842105263,
+  "tp": 714,
+  "fp": 2172,
+  "fn": 1813,
+  "tn": 81562,
+  "precision": 0.24740124740124741,
+  "recall": 0.28254847645429365,
+  "f1": 0.26380934786624793,
+  "pr_auc": 0.13485379260643257,
+  "false_positive_rate": 0.025939283922898702,
+  "false_alarms_per_10k_events": 251.79397410185368,
+  "n_total": 86261,
+  "dataset": "hdfs",
+  "model": "lstm",
+  "seed": 123,
+  "topk": 3,
+  "window_size": 5,
+  "vocab_size": 44,
+  "n_too_short_val": 932,
+  "n_too_short_test": 932
+}

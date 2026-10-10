@@ -1,0 +1,27 @@
+{
+  "dataset": "hdfs",
+  "device": "cuda",
+  "mixed_precision": true,
+  "smoke_test": true,
+  "best_val_loss": 0.9826339130401611,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 3.493554033915202,
+      "val_loss": 2.615332025527954,
+      "val_acc": 0.548
+    },
+    {
+      "epoch": 2,
+      "train_loss": 1.9101239811579387,
+      "val_loss": 1.2429499559402466,
+      "val_acc": 0.58
+    },
+    {
+      "epoch": 3,
+      "train_loss": 1.2202166131337484,
+      "val_loss": 0.9826339130401611,
+      "val_acc": 0.641
+    }
+  ]
+}

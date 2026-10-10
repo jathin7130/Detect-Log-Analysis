@@ -1,0 +1,19 @@
+{
+  "threshold": 0.3045593122113359,
+  "tp": 677,
+  "fp": 2762,
+  "fn": 48,
+  "tn": 3586,
+  "precision": 0.19685955219540563,
+  "recall": 0.9337931034482758,
+  "f1": 0.3251681075888568,
+  "pr_auc": 0.2524918681256171,
+  "false_positive_rate": 0.4350976685570258,
+  "false_alarms_per_10k_events": 3904.990810123003,
+  "n_total": 7073,
+  "train_time_sec": 0.7437927722930908,
+  "dataset": "bgl",
+  "model": "isolation_forest",
+  "features": "tfidf",
+  "contamination": 0.10235504500954748
+}

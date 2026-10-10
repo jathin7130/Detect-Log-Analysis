@@ -1,0 +1,13 @@
+{
+  "dataset": "hdfs",
+  "model_a": "lstm",
+  "model_b": "transformer",
+  "f1_a": 0.2995864053227837,
+  "f1_b": 0.278254382693025,
+  "n_bootstrap": 2000,
+  "mean_diff": 0.021476712893144907,
+  "ci95_low": 0.012646736500432566,
+  "ci95_high": 0.03089267506571604,
+  "p_value": 0.0,
+  "significant_at_0.05": true
+}

@@ -1,0 +1,28 @@
+{
+  "dataset": "thunderbird",
+  "seed": 42,
+  "device": "cuda",
+  "mixed_precision": true,
+  "smoke_test": true,
+  "best_val_loss": 6.464781284332275,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 7.241989508310954,
+      "val_loss": 7.031972885131836,
+      "val_acc": 0.011
+    },
+    {
+      "epoch": 2,
+      "train_loss": 6.891009114583333,
+      "val_loss": 6.72816801071167,
+      "val_acc": 0.149
+    },
+    {
+      "epoch": 3,
+      "train_loss": 6.59389459737142,
+      "val_loss": 6.464781284332275,
+      "val_acc": 0.149
+    }
+  ]
+}

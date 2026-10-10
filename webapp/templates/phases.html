@@ -1,0 +1,621 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>devops-log-intel // phases</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/css/style.css?v=6">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand"><span class="dot"></span> devops-log-intel</div>
+  <nav>
+    <a href="/">dashboard</a>
+    <a href="/demo">demo</a>
+    <a href="/phases" class="active">phases</a>
+  </nav>
+  <div class="meta">0 &rarr; 9, all complete</div>
+</div>
+
+<div class="page">
+
+  <div class="section-title">how this project is organized</div>
+  <p class="toc-intro">
+    The project runs as ten phases, numbered 0&ndash;9, each building on the data,
+    models or infrastructure the previous ones produced. Phases 0&ndash;3 build the
+    detection core (environment &rarr; data &rarr; classical baselines &rarr; neural
+    models). Phases 4&ndash;5 build supporting infrastructure in parallel with
+    Phase&nbsp;3 (a fault-injection testbed and a retrieval index), since neither
+    depends on the detectors finishing. Phases 6&ndash;9 turn all of that into a
+    working product: a website, an evidence-grounded RCA pipeline with a
+    reliability gate, the website wired to real results, and the final
+    write-up. Every number below is a real measured result, not a
+    placeholder &mdash; jump to any phase for the full detail.
+  </p>
+
+  <div class="phase-jumpnav">
+    <a href="#phase0">0 Setup</a>
+    <a href="#phase1">1 Data</a>
+    <a href="#phase2">2 Classical</a>
+    <a href="#phase3">3 Neural</a>
+    <a href="#phase4">4 Testbed</a>
+    <a href="#phase5">5 Retrieval</a>
+    <a href="#phase6">6 Website</a>
+    <a href="#phase7">7 RCA+Gate</a>
+    <a href="#phase8">8 Wiring</a>
+    <a href="#phase9">9 Write-up</a>
+  </div>
+
+  <!-- PHASE 0 -->
+  <div class="phase-card phase-infra" id="phase0">
+    <div class="phase-head">
+      <span class="phase-num">Phase 0</span>
+      <h2>Setup</h2>
+      <span class="badge badge-ok">done</span>
+    </div>
+    <div class="phase-tagline">Get the environment right before anything else depends on it.</div>
+
+    <div class="phase-section">
+      <h4>What it does</h4>
+      <p>Creates the Python environment, confirms it points at a real Python
+      installation (not a stub that silently breaks package installs), and
+      confirms the GPU is actually reachable by PyTorch before any training
+      is attempted.</p>
+    </div>
+    <div class="phase-section">
+      <h4>Why it matters</h4>
+      <p>Every later phase assumes two things work: the exact same Python
+      environment every time (so results are reproducible), and the GPU
+      (so neural training finishes in minutes, not days). Checking both
+      <em>before</em> starting is cheap; discovering either is broken halfway
+      through a multi-hour training run is not.</p>
+    </div>
+    <div class="phase-section">
+      <h4>Key steps</h4>
+      <ul>
+        <li>Virtual environment created, verified against a real python.org install (<code>pyvenv.cfg</code> checked directly)</li>
+        <li>GPU confirmed reachable: <code>torch.cuda.is_available() == True</code>, RTX 4060 detected</li>
+        <li>A persistent tracking checklist set up to log every step as it happens (this is <code>PROGRESS.md</code> in the repo)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PHASE 1 -->
+  <div class="phase-card phase-core" id="phase1">
+    <div class="phase-head">
+      <span class="phase-num">Phase 1</span>
+      <h2>Data Pipeline</h2>
+      <span class="badge badge-ok">done</span>
+    </div>
+    <div class="phase-tagline">Turn three raw, messy, multi-gigabyte log dumps into clean, labeled, privacy-safe sequences.</div>
+
+    <div class="phase-section">
+      <h4>What it does</h4>
+      <p>Downloads three public system-log datasets (HDFS, BGL, Thunderbird),
+      strips anything that looks like personal or sensitive information,
+      converts each raw log line into a reusable "template" (the repeating
+      shape of a message, with the changing details like IDs and numbers
+      abstracted out), groups lines into sequences a model can learn from,
+      and locks a fixed split of that data into training/validation/test
+      portions that nothing downstream is allowed to touch until evaluation.</p>
+    </div>
+    <div class="phase-section">
+      <h4>Why it matters</h4>
+      <p>Raw logs are just text &mdash; a model can't learn "normal" vs "abnormal"
+      from free text directly at any useful scale. Converting each line into
+      a template id (e.g. "Receiving block &lt;BLK&gt; from &lt;IP&gt;") turns millions
+      of lines into a much smaller vocabulary a model can actually learn
+      patterns over. Masking PII first means none of that learning ever sees
+      a real IP, hostname or credential. And freezing the data split before
+      any model is trained is what makes every later "Model A beats Model B"
+      claim trustworthy &mdash; without it, it's easy to accidentally let a model
+      see test data in disguise.</p>
+    </div>
+    <div class="phase-section">
+      <h4>Key steps</h4>
+      <ul>
+        <li>Download all three datasets in full (HDFS: 11.18M lines, BGL: 4.75M lines, Thunderbird: capped at 10M lines)</li>
+        <li>Mask IPs, hostnames, user@host pairs, file paths and credential-like strings</li>
+        <li>Parse every line into an event template with Drain3 (an algorithm built specifically for this)</li>
+        <li>Build sequences: HDFS groups lines by the storage block they describe; BGL/Thunderbird use fixed 100-event windows (no natural grouping exists for them)</li>
+        <li>Freeze a 70/15/15 train/validation/test split, stratified by label, before any model is trained</li>
+      </ul>
+    </div>
+    <div class="phase-findings">
+      <strong>What was found:</strong>
+      <ul>
+        <li>The PII mask caught two real gaps during its own spot-check &mdash; HDFS block IDs and Thunderbird install paths were both leaking unmasked into templates. Both fixed before any model saw the data.</li>
+        <li>Final result: 575,061 HDFS sequences (2.93% anomalous), 47,135 BGL sequences (10.24% anomalous), 99,808 Thunderbird sequences (38.36% anomalous) &mdash; three very differently-shaped datasets, which turns out to matter a lot later.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PHASE 2 -->
+  <div class="phase-card phase-core" id="phase2">
+    <div class="phase-head">
+      <span class="phase-num">Phase 2</span>
+      <h2>Classical Baselines</h2>
+      <span class="badge badge-ok">done</span>
+    </div>
+    <div class="phase-tagline">Before trying anything fancy, find out how far simple methods get.</div>
+
+    <div class="phase-section">
+      <h4>What it does</h4>
+      <p>Trains two well-understood, fast, non-deep-learning anomaly
+      detectors &mdash; Isolation Forest (unsupervised: it never sees labels
+      during training) and Random Forest (supervised: it does) &mdash; on
+      simple count-based features of each sequence's event templates.</p>
+    </div>
+    <div class="phase-section">
+      <h4>Why it matters</h4>
+      <p>Without this step, there's no way to know whether a later, much
+      more expensive neural model is actually earning its keep. A classical
+      baseline sets the floor: if a neural model can't beat a model that
+      trains in seconds, that's a real finding worth reporting, not an
+      embarrassment to hide.</p>
+    </div>
+    <div class="phase-section">
+      <h4>Key steps</h4>
+      <ul>
+        <li>Build TF-IDF / template-count features per sequence</li>
+        <li>Train Isolation Forest and Random Forest per dataset (seed 42)</li>
+        <li>Lock the resulting numbers as the permanent comparison point for every model that comes after</li>
+      </ul>
+    </div>
+    <div class="phase-findings">
+      <strong>What was found:</strong>
+      <ul>
+        <li>Random Forest essentially solves all three datasets (F1 &ge; 0.982 everywhere) &mdash; and does it in 1&ndash;13 seconds of training.</li>
+        <li>Isolation Forest is far weaker and wildly inconsistent (F1 from 0.325 to 0.682) &mdash; a reminder that "unsupervised" doesn't mean "good," just "doesn't need labels."</li>
+        <li>This floor turned out to matter enormously in Phase 3: the neural models don't always clear it.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PHASE 3 -->
+  <div class="phase-card phase-core" id="phase3">
+    <div class="phase-head">
+      <span class="phase-num">Phase 3</span>
+      <h2>Neural Sequence Models</h2>
+      <span class="badge badge-ok">done</span>
+    </div>
+    <div class="phase-tagline">The largest phase: LSTM, Transformer, an ablation, cross-domain transfer, drift testing, and the statistics to back every claim.</div>
+
+    <div class="phase-section">
+      <h4>What it does</h4>
+      <p>Trains two neural sequence models &mdash; an LSTM (a recurrent network
+      that reads events in order) and a compact Transformer (which uses
+      attention instead of recurrence) &mdash; to predict "what event comes
+      next" given a short window of recent events. When the real next event
+      isn't one the model expected, that's the anomaly signal. Both are
+      trained three times each (different random seeds) per dataset, so
+      results can be reported as an average with a confidence range instead
+      of a single possibly-lucky number.</p>
+      <p>Beyond that core comparison, this phase also runs five follow-on
+      investigations: an <strong>ablation</strong> (does adding a semantic
+      text embedding on top of the template id help?), a <strong>cross-domain
+      transfer test</strong> (can a model trained on one log system say
+      anything useful about a different one?), a <strong>drift test</strong>
+      (does a model trained today still work if log formats shift slightly
+      tomorrow?), a <strong>paired statistical significance test</strong>
+      (are two models' scores actually different, or just noise?), and a
+      <strong>cost/latency analysis</strong> (how much GPU time did each
+      point of accuracy actually cost?).</p>
+    </div>
+    <div class="phase-section">
+      <h4>Why it matters</h4>
+      <p>This is where the project's central question gets answered: is the
+      extra complexity (and extra GPU-hours) of a neural sequence model
+      actually worth it over the classical baselines from Phase 2? And
+      separately &mdash; even if a model looks good on the dataset it was trained
+      on, does that tell you anything about how it'll behave on a different
+      system, or on the same system next month after a software update?
+      Both questions matter more to whether this is deployable than the
+      headline accuracy number does.</p>
+    </div>
+
+    <div class="phase-section">
+      <h4>3.1 &mdash; LSTM vs. Transformer: the headline comparison</h4>
+      <p>Window=5 events, top-3 "did the model expect this" scoring, 3 seeds
+      (42/123/777) per dataset per model.</p>
+      <div class="phase-stats-row">
+        <div class="phase-stat"><div class="n">0.265 / 0.271</div><div class="l">HDFS F1 (LSTM / Transformer)</div></div>
+        <div class="phase-stat"><div class="n">0.928 / 0.926</div><div class="l">BGL F1</div></div>
+        <div class="phase-stat"><div class="n">0.823 / 0.815</div><div class="l">Thunderbird F1</div></div>
+      </div>
+      <div class="phase-findings">
+        <strong>Finding:</strong> the Transformer never meaningfully beats the
+        simpler LSTM on any of the three datasets. And on HDFS specifically,
+        <em>both</em> neural models lose to the simple Isolation Forest
+        baseline from Phase 2 (0.682) &mdash; more complexity didn't help here at
+        all.
+      </div>
+    </div>
+
+    <div class="phase-section">
+      <h4>3.2 &mdash; Ablation: does adding semantic text embeddings help?</h4>
+      <p>Compares the plain template-id model against a version that also
+      feeds in a frozen sentence-embedding of each template's text.</p>
+      <div class="phase-stats-row">
+        <div class="phase-stat"><div class="n">0.300 &rarr; 0.275</div><div class="l">HDFS (template-only &rarr; +semantic)</div></div>
+        <div class="phase-stat"><div class="n">0.932 &rarr; 0.927</div><div class="l">BGL</div></div>
+        <div class="phase-stat"><div class="n">0.836 &rarr; 0.796</div><div class="l">Thunderbird</div></div>
+      </div>
+      <div class="phase-findings">
+        <strong>Finding:</strong> adding semantic embeddings doesn't help, and
+        mildly hurts &mdash; most clearly on Thunderbird. The template id already
+        captures what the embedding would add, so the extra signal is mostly
+        noise.
+      </div>
+    </div>
+
+    <div class="phase-section">
+      <h4>3.3 &mdash; Cross-domain transfer: does training on one system help on another?</h4>
+      <p>All 6 directed pairs tested (HDFS&harr;BGL, HDFS&harr;Thunderbird, BGL&harr;Thunderbird).</p>
+      <div class="phase-stats-row">
+        <div class="phase-stat"><div class="n">6/6</div><div class="l">pairs show 100% vocabulary disjunction</div></div>
+      </div>
+      <div class="phase-findings">
+        <strong>Finding:</strong> HDFS, BGL and Thunderbird share <em>zero</em>
+        event templates with each other &mdash; they're different enough systems
+        (distributed storage vs. supercomputer hardware vs. general server
+        logs) that nothing learned on one transfers to another at the
+        template level. A subtler finding came from measuring this carefully:
+        a naive accuracy comparison before/after trying to adapt a model to
+        a new system looked <em>identical</em>, which would read as "adaptation
+        did nothing" &mdash; except it was a measurement blind spot, not a real
+        result. A different, threshold-independent check showed the model's
+        predictions had, in fact, completely flipped during adaptation. The
+        lesson: a metric that looks unchanged doesn't always mean nothing
+        changed.
+      </div>
+    </div>
+
+    <div class="phase-section">
+      <h4>3.4 &mdash; Drift: does a model stay accurate as logs evolve?</h4>
+      <p>Simulated mild, realistic drift &mdash; renamed tokens, a few new log
+      lines, shifted frequencies &mdash; on sequences the model had never seen
+      drift in, and measured how often it started false-alarming.</p>
+      <div class="phase-stats-row">
+        <div class="phase-stat"><div class="n">2.6% &rarr; 99.9%</div><div class="l">HDFS false-alarm rate (37&times;)</div></div>
+        <div class="phase-stat"><div class="n">0.4% &rarr; 5.4%</div><div class="l">BGL (11.7&times;)</div></div>
+        <div class="phase-stat"><div class="n">17.3% &rarr; 66.0%</div><div class="l">Thunderbird (2.8&times;)</div></div>
+      </div>
+      <div class="phase-findings">
+        <strong>Finding:</strong> every model gets measurably worse under mild
+        drift, and HDFS's collapse is dramatic &mdash; it ends up flagging almost
+        everything as anomalous. The pattern tracks vocabulary size: HDFS
+        has only 44 known templates, so a small drift has nowhere to "blend
+        in"; BGL and Thunderbird have over a thousand each and are more
+        forgiving.
+      </div>
+    </div>
+
+    <div class="phase-section">
+      <h4>3.5 &mdash; Is "LSTM vs. Transformer" actually a real difference, or just noise?</h4>
+      <p>A follow-up statistical check: for each dataset, both models were
+      scored on the exact same test sequences, then a paired bootstrap test
+      (2,000 resamples) checked whether their F1 difference holds up as a
+      real, repeatable effect rather than random variation.</p>
+      <div class="phase-findings">
+        <strong>Finding:</strong> on BGL, LSTM and Transformer are genuinely
+        statistically indistinguishable (p=0.073). On HDFS and Thunderbird,
+        the difference <em>is</em> statistically significant (p&lt;0.0001) &mdash;
+        but the actual gap is only 0.02&ndash;0.03 F1, small enough to be
+        irrelevant in practice. Meanwhile LSTM's gap against Random Forest
+        on HDFS (&minus;0.699) is both significant <em>and</em> large. The
+        takeaway: with a big enough test set, almost any real difference
+        becomes "statistically significant" &mdash; the size of the gap still
+        matters more than the p-value alone.
+      </div>
+    </div>
+
+    <div class="phase-section">
+      <h4>3.6 &mdash; Was the GPU time worth it?</h4>
+      <div class="phase-stats-row">
+        <div class="phase-stat"><div class="n">13.3s</div><div class="l">HDFS Random Forest training</div></div>
+        <div class="phase-stat"><div class="n">955s</div><div class="l">HDFS LSTM training (mean of 3 seeds)</div></div>
+      </div>
+      <div class="phase-findings">
+        <strong>Finding:</strong> classical models train 2&ndash;3 orders of
+        magnitude faster than the neural ones across all three datasets, and
+        on HDFS/Thunderbird they're simultaneously <em>more</em> accurate too.
+        The neural models' extra cost isn't buying extra accuracy often
+        enough to justify it by cost alone.
+      </div>
+    </div>
+
+    <div class="phase-section">
+      <h4>A result worth double-checking: was the HDFS comparison fair?</h4>
+      <p>HDFS sequences are much shorter on average (19.4 events) than BGL/
+      Thunderbird's fixed 100-event windows, so the same window-size-5
+      setting might be unfair to HDFS specifically. A follow-up sensitivity
+      check re-ran HDFS with a larger window (10) and more lenient scoring
+      (top-5 instead of top-3).</p>
+      <div class="phase-stats-row">
+        <div class="phase-stat"><div class="n">0.300 &rarr; 0.545</div><div class="l">HDFS LSTM F1 (main config &rarr; adjusted)</div></div>
+      </div>
+      <div class="phase-findings">
+        <strong>Finding:</strong> F1 nearly doubles with a more HDFS-appropriate
+        setting &mdash; so the original "LSTM loses badly to Isolation Forest on
+        HDFS" result was partly an artifact of using one fixed setting across
+        very different datasets. The qualitative conclusion still holds (it
+        doesn't clearly beat Isolation Forest, 0.545 vs 0.682), but "loses
+        badly" overstated it. The main results were deliberately <em>not</em>
+        changed to the better setting &mdash; adjusting hyperparameters per-dataset
+        after seeing results would make every other cross-dataset comparison
+        unfair too. This is reported as a limitation instead.
+      </div>
+    </div>
+  </div>
+
+  <!-- PHASE 4 -->
+  <div class="phase-card phase-infra" id="phase4">
+    <div class="phase-head">
+      <span class="phase-num">Phase 4</span>
+      <h2>Fault-Injection Testbed</h2>
+      <span class="badge badge-ok">done</span>
+      <span class="badge badge-info">runs alongside Phase 3</span>
+    </div>
+    <div class="phase-tagline">The public datasets have anomaly labels but no known root cause. This phase builds a small system where the cause is always known.</div>
+
+    <div class="phase-section">
+      <h4>What it does</h4>
+      <p>Stands up four small web services (gateway &rarr; orders &rarr; inventory
+      / payments) in Docker, wired so a request to "check out" flows through
+      all of them and gets logged realistically at every step. Four kinds of
+      real failures can be deliberately injected into any service on demand
+      &mdash; a database connection failure, a slow downstream call, memory
+      pressure, or a full process crash-and-restart &mdash; and because the
+      injection is scripted, the exact service, fault type and timing is
+      always known precisely.</p>
+    </div>
+    <div class="phase-section">
+      <h4>Why it matters</h4>
+      <p>HDFS/BGL/Thunderbird can tell you "this looks anomalous" but never
+      "and here's why." Root-cause analysis (Phase 7) needs incidents where
+      the true cause is known, so its diagnoses can actually be checked
+      against ground truth instead of just checked for whether they sound
+      plausible.</p>
+    </div>
+    <div class="phase-section">
+      <h4>Key steps</h4>
+      <ul>
+        <li>4 Flask microservices in Docker Compose, logging through the exact same masking + template-parsing pipeline as Phase 1 (no separate code path to maintain)</li>
+        <li>4 fault types implemented and each individually verified &mdash; including confirming a "pod restart" fault actually restarts the container, not just logs a line claiming to</li>
+        <li>An 8-incident scenario run with continuous background traffic, ground truth recorded automatically for every injected fault</li>
+      </ul>
+    </div>
+    <div class="phase-findings">
+      <strong>What was found:</strong>
+      <ul>
+        <li>245 requests, 34 errors, across 280 seconds of the scripted scenario</li>
+        <li>All 8 injected incidents show a clear spike in error/warning log lines at their exact injection timestamp once run through the parsing pipeline &mdash; confirming the testbed actually produces usable, diagnosable incidents, not just noise.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PHASE 5 -->
+  <div class="phase-card phase-infra" id="phase5">
+    <div class="phase-head">
+      <span class="phase-num">Phase 5</span>
+      <h2>Retrieval Layer</h2>
+      <span class="badge badge-ok">done</span>
+      <span class="badge badge-info">runs alongside Phase 3</span>
+    </div>
+    <div class="phase-tagline">Build a searchable memory of every known template and incident, so RCA has something real to cite.</div>
+
+    <div class="phase-section">
+      <h4>What it does</h4>
+      <p>Converts every known log template (from all three datasets and the
+      testbed) plus every testbed incident description into a numeric
+      "meaning vector" using a small pretrained language model, and indexes
+      all of them for fast similarity search &mdash; given a new incident, find
+      the most similar things seen before.</p>
+    </div>
+    <div class="phase-section">
+      <h4>Why it matters</h4>
+      <p>This is what lets Phase 7's language model cite real, specific
+      evidence instead of making things up from general knowledge. Without
+      it, there'd be nothing for an RCA answer to be grounded in.</p>
+    </div>
+    <div class="phase-section">
+      <h4>Key steps</h4>
+      <ul>
+        <li>3,360 documents embedded with <code>all-MiniLM-L6-v2</code> (templates + testbed incidents)</li>
+        <li>A FAISS similarity index built over them</li>
+        <li>Manually sanity-checked with made-up queries to confirm the matches actually make sense</li>
+      </ul>
+    </div>
+    <div class="phase-findings">
+      <strong>What was found:</strong> every test query's top match was
+      clearly correct &mdash; e.g. "memory usage is very high" matched the
+      testbed's exact resource-exhaustion log line at 0.714 similarity.
+      The retrieval layer works as intended before it's ever plugged into
+      the RCA pipeline.
+    </div>
+  </div>
+
+  <!-- PHASE 6 -->
+  <div class="phase-card phase-product" id="phase6">
+    <div class="phase-head">
+      <span class="phase-num">Phase 6</span>
+      <h2>Website</h2>
+      <span class="badge badge-ok">done</span>
+    </div>
+    <div class="phase-tagline">The site you're looking at right now.</div>
+
+    <div class="phase-section">
+      <h4>What it does</h4>
+      <p>A small web app (plain HTML/CSS/JS, no frontend framework, served
+      by a lightweight Python backend) with two pages: this dashboard, and a
+      demo page that walks through a single incident end to end.</p>
+    </div>
+    <div class="phase-section">
+      <h4>Why it matters</h4>
+      <p>Numbers in JSON files aren't how anyone actually wants to review
+      results. A browsable site makes every phase's output inspectable
+      without reading raw output files.</p>
+    </div>
+    <div class="phase-section">
+      <h4>Key steps</h4>
+      <ul>
+        <li>Picked the stack: a small Python backend + plain HTML/CSS/JS, kept deliberately simple</li>
+        <li>Built the dashboard and demo page shells</li>
+        <li>Styled both consistently (the dark, monospace, status-colored look you're looking at)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PHASE 7 -->
+  <div class="phase-card phase-core" id="phase7">
+    <div class="phase-head">
+      <span class="phase-num">Phase 7</span>
+      <h2>RCA + Reliability Gate</h2>
+      <span class="badge badge-ok">done</span>
+    </div>
+    <div class="phase-tagline">The part where a language model tries to explain <em>why</em> &mdash; and gets checked on whether it's allowed to.</div>
+
+    <div class="phase-section">
+      <h4>What it does</h4>
+      <p>For a given incident, retrieves the most relevant evidence (Phase 5),
+      asks a local language model (<code>llama3.1:8b</code>, run entirely on
+      this machine &mdash; no log data is ever sent to an external API) to
+      diagnose the root cause and say exactly which evidence it's basing
+      that on, then runs the answer through a <strong>reliability gate</strong>
+      that independently checks two things: did the model actually cite
+      evidence that exists, and is its confidence above a threshold? If
+      either check fails, the gate forces the answer to "abstain" &mdash; <em>
+      regardless of what the model itself claimed.</em></p>
+    </div>
+    <div class="phase-section">
+      <h4>Why it matters</h4>
+      <p>A language model can sound completely confident while being
+      completely wrong, especially when it's missing the information it
+      would actually need. The gate exists because trusting a model's own
+      stated confidence turns out to be a bad idea &mdash; shown directly in the
+      ablation below, where removing evidence made the model <em>more</em>
+      confident, not less.</p>
+    </div>
+    <div class="phase-section">
+      <h4>7.1 &mdash; Running RCA across 20 real incidents</h4>
+      <p>8 real testbed faults (known cause) + 12 genuine anomalies the
+      trained LSTM actually flagged in HDFS/BGL/Thunderbird (not random
+      windows).</p>
+      <div class="phase-stats-row">
+        <div class="phase-stat"><div class="n">18/20</div><div class="l">passed the gate</div></div>
+        <div class="phase-stat"><div class="n">1/20</div><div class="l">gate overrode the model</div></div>
+        <div class="phase-stat"><div class="n">16/20</div><div class="l">judged correct on manual review</div></div>
+      </div>
+      <div class="phase-findings">
+        Of the 20 cases: 16 were clearly correct, 1 was correct but got
+        conservatively gated to abstain anyway (its confidence just dipped
+        below the threshold), 1 was an honest self-abstain (the model
+        itself said the evidence wasn't enough), and 2 were flagged &mdash; both
+        were the same kind of case ("pod restart" faults where only an
+        upstream service's logs were visible), and both got the affected
+        service right but described the symptom rather than the actual
+        crash. That's an explainable gap in what evidence was available, not
+        random error.
+      </div>
+    </div>
+    <div class="phase-section">
+      <h4>7.2 &mdash; Does retrieval actually matter, or is it just nice-to-have?</h4>
+      <p>A controlled follow-up: run the exact same 20 incidents again, but
+      tell the model no evidence was retrieved, and see what happens.</p>
+      <div class="phase-stats-row">
+        <div class="phase-stat"><div class="n">90% &rarr; 0%</div><div class="l">gate answer rate (with &rarr; without retrieval)</div></div>
+        <div class="phase-stat"><div class="n">0.76 &rarr; 0.85</div><div class="l">model's own confidence (with &rarr; without)</div></div>
+      </div>
+      <div class="phase-findings">
+        <strong>Finding:</strong> without retrieval, every single attempted
+        answer is unsupported by definition &mdash; there's nothing it could have
+        validly cited &mdash; and the gate correctly refuses all of them. The model's
+        self-reported confidence went <em>up</em>, not down, once it had less
+        to go on &mdash; the opposite of what you'd want, and exactly the
+        behavior that makes an external, independent check necessary rather
+        than optional.
+      </div>
+    </div>
+  </div>
+
+  <!-- PHASE 8 -->
+  <div class="phase-card phase-product" id="phase8">
+    <div class="phase-head">
+      <span class="phase-num">Phase 8</span>
+      <h2>Wire Website to Real Results</h2>
+      <span class="badge badge-ok">done</span>
+    </div>
+    <div class="phase-tagline">Make sure nothing on the site is pretend.</div>
+
+    <div class="phase-section">
+      <h4>What it does</h4>
+      <p>Replaces every placeholder number or canned example on the site
+      with live reads from the actual result files Phases 2&ndash;7 produced.
+      The demo page in particular went from a single hardcoded example to a
+      dropdown over all 20 real RCA cases &mdash; including the one where the
+      gate overrode the model, and the one honest self-abstain.</p>
+    </div>
+    <div class="phase-section">
+      <h4>Why it matters</h4>
+      <p>A demo that quietly shows fake output isn't a demo of the system
+      &mdash; it's a demo of a mockup. Every claim on this site should be
+      checkable against a real file in the repo.</p>
+    </div>
+    <div class="phase-section">
+      <h4>Key steps</h4>
+      <ul>
+        <li>Dashboard metrics confirmed real (they already were, from Phase 6)</li>
+        <li>Demo page repointed at the real RCA pipeline's saved output</li>
+        <li>A default "answer" case and a default "abstain" case curated so a first-time visitor sees both gate behaviors without hunting for them</li>
+        <li>Full end-to-end test in-browser, desktop and mobile</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PHASE 9 -->
+  <div class="phase-card phase-product" id="phase9">
+    <div class="phase-head">
+      <span class="phase-num">Phase 9</span>
+      <h2>Write-up &amp; QA</h2>
+      <span class="badge badge-ok">done</span>
+    </div>
+    <div class="phase-tagline">Turn results into a document someone else can actually read and trust.</div>
+
+    <div class="phase-section">
+      <h4>What it does</h4>
+      <p>Consolidates every phase's findings into a single written report,
+      documents every place the plan changed from what was originally
+      proposed (and why), and does a final pass checking that every number
+      in the write-up actually matches the underlying result file it claims
+      to summarize.</p>
+    </div>
+    <div class="phase-section">
+      <h4>Why it matters</h4>
+      <p>Results scattered across dozens of output files aren't a thesis.
+      And a write-up nobody has fact-checked against its own source data is
+      asking a reader to trust it blind.</p>
+    </div>
+    <div class="phase-section">
+      <h4>Key steps</h4>
+      <ul>
+        <li>Full results narrative written, organized by phase, with every scoping decision explicitly tabulated</li>
+        <li><code>requirements.txt</code> audited against what the code actually imports</li>
+        <li>A full audit pass: every number quoted in the write-up cross-checked line-by-line against the result file it came from</li>
+        <li>Follow-up gap-closing work: paired statistical significance tests, a consolidated cost/latency table, and the with/without-retrieval ablation above &mdash; all three were identified as missing during review and closed before the write-up was finalized</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-note">
+    Every number on this page traces back to a real file in the repository &mdash; see <code>REPORT.md</code> and <code>THESIS.md</code> for the full narrative, or <code>PROGRESS.md</code> for the complete dated build log.
+  </div>
+
+</div>
+
+</body>
+</html>
